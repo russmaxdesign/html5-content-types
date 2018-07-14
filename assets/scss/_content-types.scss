@@ -1,0 +1,19 @@
+code {
+  background: #efefef;
+  color: green;
+}
+
+.container-wide {
+  max-width: 55em;
+  margin: 0 auto;
+}
+
+th {
+  border-top: 1px solid $base-table-color;
+  border-left: 1px solid $base-table-color;
+  border-right: 1px solid $base-table-color;
+}
+
+td {
+  border: 1px solid $base-table-color;
+}
