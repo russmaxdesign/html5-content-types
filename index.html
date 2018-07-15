@@ -12,20 +12,24 @@
     <h1>HTML 5 Content Types</h1>
     <p><a href="https://github.com/russmaxdesign/content-types">Github Page</a></p>
 
-    <p>In HTML 4.01, there was a distinction between block-level and inline elements.</p>
-    <p>In HTML 5, this distinction between block and inline has been replaced with a more complex set of content categories.</p>
+    <p>In HTML 4.01, there was a distinction between block-level and inline elements. In HTML 5, this distinction between block and inline has been replaced with a more complex set of content categories.</p>
     <p>Each element in HTML falls into zero or more categories that group elements with similar characteristics.</p>
-    <p>The following broad categories are used:</p>
-    <ul>
-      <li>Metadata content</li>
-      <li>Flow content</li>
-      <li>Sectioning content</li>
-      <li>Heading content</li>
-      <li>Phrasing content</li>
-      <li>Embedded content</li>
-      <li>Interactive content</li>
-    </ul>
-    <p>These content categories are defined in more detail in the <a href="https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content">HTML Living Standard</a> specification.</p>
+    <h2>Content type categories</h2>
+    <h3>Metadata content</h3>
+    <p>Metadata content is content that sets up the presentation or behaviour of the rest of the content, or that sets up the relationship of the document with other documents.</p>
+    <h3>Flow content</h3>
+    <p>Most elements that are used in the body of documents and applications are categorised as flow content. The only elements that are not considered flow elements are a subset of metadata elements.</p>
+    <h3>Sectioning content</h3>
+    <p>Sectioning content is content that defines the scope of headings and footers.</p>
+    <h3>Heading content</h3>
+    <p>Heading content defines the header of a section.</p>
+    <h3>Phrasing content</h3>
+    <p>Phrasing content is the text of the document, as well as elements that mark up that text within paragraphs.</p>
+    <h3>Embedded content</h3>
+    <p>Embedded content is content that imports another resource into the document.</p>
+    <h3>Interactive content</h3>
+    <p>Interactive content is content that is specifically intended for user interaction.</p>
+    <h2>Content categories table</h2>
     <table>
       <thead>
         <tr>
@@ -851,7 +855,6 @@
         </tr>
       </tbody>
     </table>
-
     <h3>Flow exceptions</h3>
     <p>These elements are considered flow if the following conditions are met:</p>
     <ul>
@@ -882,6 +885,7 @@
       <li id="f17">[17] <code>&lt;object&gt;</code>, if the <code>usemap</code> attribute is present</li>
       <li id="f18">[18] <code>&lt;video&gt;</code>, if the <code>controls</code> attribute is present</li>
     </ul>
+    <p>These content categories are defined in more detail in the <a href="https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content">HTML Living Standard</a> specification.</p>
 
 
 
