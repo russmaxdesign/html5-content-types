@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>HTML 5 Content Types</title>
+  <title>HTML Content Model Categories</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <div class="container-wide">
-    <h1>HTML 5 Content Types</h1>
+    <h1>HTML Content Model Categories</h1>
     <p><a href="https://github.com/russmaxdesign/content-types">Github Page</a></p>
 
     <p>In HTML 4.01, there was a distinction between block-level and inline elements. In HTML 5, this distinction between block and inline has been replaced with a more complex set of content categories.</p>
     <p>Each element in HTML falls into zero or more categories that group elements with similar characteristics.</p>
-    <h2>Content type categories</h2>
+
+    <h2>Content model categories</h2>
     <h3>Metadata content</h3>
     <p>Metadata content is content that sets up the presentation or behaviour of the rest of the content, or that sets up the relationship of the document with other documents.</p>
     <h3>Flow content</h3>
@@ -29,863 +30,465 @@
     <p>Embedded content is content that imports another resource into the document.</p>
     <h3>Interactive content</h3>
     <p>Interactive content is content that is specifically intended for user interaction.</p>
+    <h3>Palpable content</h3>
+    <p>Elements whose content model allows any flow content or phrasing content should have at least one node in its contents that is palpable content and that does not have the hidden attribute specified.</p>
+    <h3>Sectioning root content</h3>
+    <p>These elements can have their own outlines, but the sections and headings inside these elements do not contribute to the outlines of their ancestors.</p>
     <h2>Content categories table</h2>
     <table>
       <thead>
         <tr>
-          <th>Metadata</th>
-          <th>Flow</th>
-          <th>Sectioning</th>
-          <th>Heading</th>
-          <th>Phrasing</th>
-          <th>Embedded</th>
-          <th>Interactive</th>
+          <th>Element</th>
+          <th>Categories</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td></td>
           <td><code>&lt;a&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;a&gt;</code></td>
-          <td></td>
-          <td><code>&lt;a&gt;</code> <sup><a href="#f12">12</a></sup></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> (if the element has an <code>href</code> attribute)</td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;abbr&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;abbr&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;address&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
-          <td><code>&lt;area&gt;</code> <sup><a href="#f01">1</a></sup></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;area&gt;</code> <sup><a href="#f05">5</a></sup></td>
-          <td></td>
-          <td></td>
+          <td><code>&lt;area&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a> (if it is a descendant of a <code>&lt;map&gt;</code> element), <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> (if it is a descendant of a <code>&lt;map&gt;</code> element)</td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;article&gt;</code></td>
-          <td><code>&lt;article&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#sectioning-content">sectioning</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;aside&gt;</code></td>
-          <td><code>&lt;aside&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;audio&gt;</code></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#sectioning-content">sectioning</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;audio&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;audio&gt;</code></td>
-          <td></td>
-          <td><code>&lt;audio&gt;</code> <sup><a href="#f13">13</a></sup></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> (if the <code>controls</code> attribute is present)</td>
+        </tr>
+        <tr>
+          <td><code>&lt;b&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
           <td><code>&lt;base&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a></td>
         </tr>
         <tr>
-          <td></td>
-          <td><code>&lt;bbd&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;bbd&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><code>&lt;bdi&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
-          <td><code>&lt;i&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;i&gt;</code></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
           <td><code>&lt;bdo&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;bdo&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;blockquote&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;body&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a></td>
+        </tr>
+        <tr>
           <td><code>&lt;br&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;br&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;button&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;button&gt;</code></td>
-          <td></td>
-          <td><code>&lt;button&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;canvas&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;canvas&gt;</code></td>
-          <td><code>&lt;canvas&gt;</code></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;caption&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
           <td><code>&lt;cite&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;cite&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;code&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;code&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;col&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
+          <td><code>&lt;colgroup&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
           <td><code>&lt;data&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;data&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;datalist&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;datalist&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;dd&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>none</td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;del&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;del&gt;</code> <sup><a href="#f06">6</a></sup></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> (if it contains only <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> content)</td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;details&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;details&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;dfn&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;dfn&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;dialog&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;div&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;dl&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a> (If the element’s children include at least one name-value group)</td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;dt&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>none</td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;em&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;em&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;embed&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;embed&gt;</code></td>
-          <td><code>&lt;embed&gt;</code></td>
-          <td><code>&lt;embed&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;fieldset&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;figcaption&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
           <td><code>&lt;figure&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;footer&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;form&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;h1&gt;</code></td>
-          <td></td>
-          <td><code>&lt;h1&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#heading-content">heading</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;h2&gt;</code></td>
-          <td></td>
-          <td><code>&lt;h2&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#heading-content">heading</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;h3&gt;</code></td>
-          <td></td>
-          <td><code>&lt;h3&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#heading-content">heading</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;h4&gt;</code></td>
-          <td></td>
-          <td><code>&lt;h4&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#heading-content">heading</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;h5&gt;</code></td>
-          <td></td>
-          <td><code>&lt;h5&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#heading-content">heading</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;h6&gt;</code></td>
-          <td></td>
-          <td><code>&lt;h6&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#heading-content">heading</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;head&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
           <td><code>&lt;header&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;hr&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a></td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;html&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
           <td><code>&lt;i&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;i&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;iframe&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;iframe&gt;</code></td>
-          <td><code>&lt;iframe&gt;</code></td>
-          <td><code>&lt;iframe&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;img&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;img&gt;</code></td>
-          <td><code>&lt;img&gt;</code></td>
-          <td><code>&lt;img&gt;</code> <sup><a href="#f14">14</a></sup></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> (If the element has a <code>usemap</code> attribute)</td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;input&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;input&gt;</code></td>
-          <td></td>
-          <td><code>&lt;input&gt;</code> <sup><a href="#f15">15</a></sup></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> (if the type attribute is not in the <code>hidden</code> state), <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a> (ff the type attribute is not in the <code>hidden</code> state)</td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;ins&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;ins&gt;</code> <sup><a href="#f07">7</a></sup></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> (if it contains only <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> content), <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;kbd&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;kbd&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;label&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;label&gt;</code></td>
-          <td></td>
-          <td><code>&lt;label&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;legend&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
           <td><code>&lt;li&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>none</td>
         </tr>
         <tr>
           <td><code>&lt;link&gt;</code></td>
-          <td><code>&lt;link&gt;</code> <sup><a href="#f02">2</a></sup></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;link&gt;</code> <sup><a href="#f08">8</a></sup></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a> (if the <code>itemprop</code> attribute is present, or if the element is allowed in the body), <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> (if the <code>itemprop</code> attribute is present, or if the element is allowed in the body)</td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;main&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;map&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;map&gt;</code> <sup><a href="#f09">9</a></sup></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> (if it contains only <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> content), <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;mark&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;mark&gt;</code></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><code>&lt;math&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;math&gt;</code></td>
-          <td><code>&lt;math&gt;</code></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><code>&lt;menu&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;menu&gt;</code> <sup><a href="#f16">16</a></sup></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
           <td><code>&lt;meta&gt;</code></td>
-          <td><code>&lt;meta&gt;</code> <sup><a href="#f03">3</a></sup></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;meta&gt;</code> <sup><a href="#f10">10</a></sup></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a> (if the <code>itemprop</code> attribute is present, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> (if the <code>itemprop</code> attribute is present)</td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;meter&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;meter&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;nav&gt;</code></td>
-          <td><code>&lt;nav&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#sectioning-content">sectioning</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
           <td><code>&lt;noscript&gt;</code></td>
-          <td><code>&lt;noscript&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;noscript&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;object&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;object&gt;</code></td>
-          <td><code>&lt;object&gt;</code></td>
-          <td><code>&lt;object&gt;</code> <sup><a href="#f17">17</a></sup></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> (if the <code>usemap</code> attribute is present), <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;ol&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a></td>
         </tr>
         <tr>
-          <td></td>
-          <td><code>&lt;output&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;output&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><code>&lt;optgroup&gt;</code></td>
+          <td>none</td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;option&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
+          <td><code>&lt;output&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
+        </tr>
+        <tr>
           <td><code>&lt;p&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
-          <td><code>&lt;picture&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;picture&gt;</code></td>
-          <td><code>&lt;picture&gt;</code></td>
-          <td></td>
+          <td><code>&lt;param&gt;</code></td>
+          <td>none</td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;picture&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a></td>
+        </tr>
+        <tr>
           <td><code>&lt;pre&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;progress&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;progress&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;q&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;q&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;rb&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
+          <td><code>&lt;rp&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
+          <td><code>&lt;rt&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
+          <td><code>&lt;rtc&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
           <td><code>&lt;ruby&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;ruby&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;s&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;s&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;samp&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;samp&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
           <td><code>&lt;script&gt;</code></td>
-          <td><code>&lt;script&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;script&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;section&gt;</code></td>
-          <td><code>&lt;section&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#sectioning-content">sectioning</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;select&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;select&gt;</code></td>
-          <td></td>
-          <td><code>&lt;select&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;small&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;small&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
-          <td><code>&lt;span&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;span&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><code>&lt;source&gt;</code></td>
+          <td>none</td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;span&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
+        </tr>
+        <tr>
           <td><code>&lt;strong&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;strong&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
           <td><code>&lt;style&gt;</code></td>
-          <td><code>&lt;style&gt;</code> <sup><a href="#f04">4</a></sup></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;sub&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;sub&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;summary&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
           <td><code>&lt;sup&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;sup&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
-          <td><code>&lt;svg&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;svg&gt;</code></td>
-          <td><code>&lt;svg&gt;</code></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
           <td><code>&lt;table&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
+        </tr>
+        <tr>
+          <td><code>&lt;tbody&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
+          <td><code>&lt;td&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a></td>
         </tr>
         <tr>
           <td><code>&lt;template&gt;</code></td>
-          <td><code>&lt;template&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;template&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;textarea&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;textarea&gt;</code></td>
-          <td></td>
-          <td><code>&lt;textarea&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;tfoot&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
+          <td><code>&lt;th&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
+          <td><code>&lt;thead&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
           <td><code>&lt;time&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;time&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
           <td><code>&lt;title&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a></td>
         </tr>
         <tr>
-          <td></td>
-          <td><code>&lt;u&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;u&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><code>&lt;tr&gt;</code></td>
+          <td>none</td>
         </tr>
         <tr>
-          <td></td>
+          <td><code>&lt;track&gt;</code></td>
+          <td>none</td>
+        </tr>
+        <tr>
+          <td><code>&lt;u&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
+        </tr>
+        <tr>
           <td><code>&lt;ul&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a> (if the element’s children include at least one <code>&lt;li&gt;</code> element</td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;var&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;var&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;video&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;video&gt;</code></td>
-          <td><code>&lt;video&gt;</code></td>
-          <td><code>&lt;video&gt;</code> <sup><a href="#f18">18</a></sup></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> (if the element has a <code>controls</code> attribute), <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
-          <td></td>
           <td><code>&lt;wbr&gt;</code></td>
-          <td></td>
-          <td></td>
-          <td><code>&lt;wbr&gt;</code></td>
-          <td></td>
-          <td></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a></td>
         </tr>
       </tbody>
     </table>
-    <h3>Flow exceptions</h3>
-    <p>These elements are considered flow if the following conditions are met:</p>
-    <ul>
-      <li id="f01">[1] <code>&lt;area&gt;</code>, if it is a descendant of a <code>&lt;map&gt;</code> element</li>
-      <li id="f02">[2] <code>&lt;link&gt;</code>, if the <code>itemprop</code> attribute is present</li>
-      <li id="f03">[3] <code>&lt;meta&gt;</code>, if the <code>itemprop</code> attribute is present</li>
-      <li id="f04">[4] <code>&lt;style&gt;</code>, if the <code>scoped</code> attribute is present</li>
-      <li id="f05">[5] <code>&lt;a&gt;</code>, if it contains only phrasing content</li>
-    </ul>
-    <h3>Phrasing exceptions</h3>
-    <p>These elements are considered phrasing if the following conditions are met:</p>
-    <ul>
-      <li id="f06">[6] <code>&lt;area&gt;</code>, if it is a descendant of a <code>&lt;map&gt;</code> element</li>
-      <li id="f07">[7] <code>&lt;del&gt;</code>, if it contains only phrasing content</li>
-      <li id="f08">[8] <code>&lt;ins&gt;</code>, if it contains only phrasing content</li>
-      <li id="f09">[9] <code>&lt;link&gt;</code>, if the <code>itemprop</code> attribute is present</li>
-      <li id="f10">[10] <code>&lt;map&gt;</code>, if it contains only phrasing content</li>
-      <li id="f11">[11] <code>&lt;meta&gt;</code>, if the <code>itemprop</code> attribute is present</li>
-    </ul>
-    <h3>Interactive exceptions</h3>
-    <p>These elements are considered interactive if the following conditions are met:</p>
-    <ul>
-      <li id="f12">[12] <code>&lt;a&gt;</code>, if the <code>href</code> attribute is present</li>
-      <li id="f13">[13] <code>&lt;audio&gt;</code>, if the <code>controls</code> attribute is present</li>
-      <li id="f14">[14] <code>&lt;img&gt;</code>, if the <code>usemap</code> attribute is present</li>
-      <li id="f15">[15] <code>&lt;input&gt;</code>, if the <code>type</code> attribute is not in the hidden state</li>
-      <li id="f16">[16] <code>&lt;menu&gt;</code>, if the <code>type</code> attribute is in the toolbar state</li>
-      <li id="f17">[17] <code>&lt;object&gt;</code>, if the <code>usemap</code> attribute is present</li>
-      <li id="f18">[18] <code>&lt;video&gt;</code>, if the <code>controls</code> attribute is present</li>
-    </ul>
-    <p>These content categories are defined in more detail in the <a href="https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content">HTML Living Standard</a> specification.</p>
 
     <p><a href="https://github.com/russmaxdesign/content-types">Github Page</a></p>
   </div>
