@@ -1,4 +1,4 @@
-# HTML 5 Content Types
+# HTML Content Model Categories
 
 Demo version: https://russmaxdesign.github.io/html5-content-types/
 
