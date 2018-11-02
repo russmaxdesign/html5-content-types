@@ -16,24 +16,70 @@
     <p>Each element in HTML falls into zero or more categories that group elements with similar characteristics.</p>
 
     <h2>Content model categories</h2>
+    <div style="max-width: 700px">
+      <?xml version="1.0" encoding="utf-8"?>
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 770 420" style="enable-background:new 0 0 770 420;" xml:space="preserve">
+        <title>Diagram showing content model categories overlapping</title>
+        <style type="text/css">
+          .st1{opacity:0.2;fill:#AF9831;}
+          .st2{opacity:0.2;fill:#3A78B4;}
+          .st3{opacity:0.2;fill:#50893E;}
+          .st4{opacity:0.2;fill:#B06A28;}
+          .st5{opacity:0.2;fill:#814B9E;}
+          .st6{font-family:'HelveticaNeue-Bold';}
+          .st7{font-size:28px;}
+          .st8{opacity:0.2;fill:#8C5060;}
+          .st9{fill:none;stroke:#231F20;stroke-width:2;stroke-miterlimit:10;}
+        </style>
+        <ellipse class="st9" cx="385" cy="210" rx="375" ry="200"/>
+        <ellipse class="st1" cx="192" cy="165" rx="150" ry="75"/>
+        <ellipse class="st2" cx="325" cy="208" rx="120" ry="125"/>
+        <ellipse class="st3" cx="572" cy="141" rx="115" ry="65"/>
+        <ellipse class="st4" cx="572" cy="283" rx="115" ry="65"/>
+        <ellipse class="st5" cx="192" cy="335" rx="150" ry="75"/>
+        <ellipse class="st8" cx="325" cy="210" rx="105" ry="40"/>
+        <ellipse class="st9" cx="192" cy="165" rx="150" ry="75"/>
+        <ellipse class="st9" cx="325" cy="208" rx="120" ry="125"/>
+        <ellipse class="st9" cx="572" cy="141" rx="115" ry="65"/>
+        <ellipse class="st9" cx="572" cy="283" rx="115" ry="65"/>
+        <ellipse class="st9" cx="192" cy="335" rx="150" ry="75"/>
+        <ellipse class="st9" cx="325" cy="210" rx="105" ry="40"/>
+        <text transform="matrix(1 0 0 1 372 58)" class="st6 st7">Flow</text>
+        <text transform="matrix(1 0 0 1 516 146)" class="st6 st7">Heading</text>
+        <text transform="matrix(1 0 0 1 501 290)" class="st6 st7">Sectioning</text>
+        <text transform="matrix(1 0 0 1 134 348)" class="st6 st7">Metadata</text>
+        <text transform="matrix(1 0 0 1 57 172)" class="st6 st7">Interactive</text>
+        <text transform="matrix(1 0 0 1 265 153)" class="st6 st7">Phrasing</text>
+        <text transform="matrix(1 0 0 1 252 218)" class="st6 st7">Embedded</text>
+      </svg>
+    </div>
+
     <h3>Metadata content</h3>
     <p>Metadata content is content that sets up the presentation or behaviour of the rest of the content, or that sets up the relationship of the document with other documents.</p>
     <h3>Flow content</h3>
-    <p>Most elements that are used in the body of documents and applications are categorised as flow content. The only elements that are not considered flow elements are a subset of metadata elements.</p>
+    <p>Most elements that are used in the body of documents and applications are categorised as flow content. The only elements that are not considered flow elements are a subset of metadata elements. The older "block-level" category roughly corresponds to this flow content category.</p>
+    <h3>Phrasing content</h3>
+    <p>Phrasing content is the text of the document, as well as elements that mark up that text within paragraphs. The older "inline" category corresponds to phrasing content.</p>
+
     <h3>Sectioning content</h3>
     <p>Sectioning content is content that defines the scope of headings and footers.</p>
+
     <h3>Heading content</h3>
     <p>Heading content defines the header of a section.</p>
-    <h3>Phrasing content</h3>
-    <p>Phrasing content is the text of the document, as well as elements that mark up that text within paragraphs.</p>
+
     <h3>Embedded content</h3>
     <p>Embedded content is content that imports another resource into the document.</p>
+
     <h3>Interactive content</h3>
     <p>Interactive content is content that is specifically intended for user interaction.</p>
+
+    <p>There are also two lessor categories:</p>
     <h3>Palpable content</h3>
     <p>Elements whose content model allows any flow content or phrasing content should have at least one node in its contents that is palpable content and that does not have the hidden attribute specified.</p>
+
     <h3>Sectioning root content</h3>
     <p>These elements can have their own outlines, but the sections and headings inside these elements do not contribute to the outlines of their ancestors.</p>
+
     <h2>Content categories table</h2>
     <table>
       <thead>
@@ -45,7 +91,7 @@
       <tbody>
         <tr>
           <td><code>&lt;a&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> (if the element has an <code>href</code> attribute)</td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> <span class="small">(if the element has an <code>href</code> attribute)</span></td>
         </tr>
         <tr>
           <td><code>&lt;abbr&gt;</code></td>
@@ -57,7 +103,7 @@
         </tr>
         <tr>
           <td><code>&lt;area&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a> (if it is a descendant of a <code>&lt;map&gt;</code> element), <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> (if it is a descendant of a <code>&lt;map&gt;</code> element)</td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a> <span class="small">(if it is a descendant of a <code>&lt;map&gt;</code> element)</span>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> <span class="small">(if it is a descendant of a <code>&lt;map&gt;</code> element)</span></td>
         </tr>
         <tr>
           <td><code>&lt;article&gt;</code></td>
@@ -69,7 +115,7 @@
         </tr>
         <tr>
           <td><code>&lt;audio&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> (if the <code>controls</code> attribute is present)</td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> <span class="small">(if the <code>controls</code> attribute is present)</span></td>
         </tr>
         <tr>
           <td><code>&lt;b&gt;</code></td>
@@ -141,7 +187,7 @@
         </tr>
         <tr>
           <td><code>&lt;del&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> (if it contains only <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> content)</td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> <span class="small">(if it contains only <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> content)</span></td>
         </tr>
         <tr>
           <td><code>&lt;details&gt;</code></td>
@@ -161,7 +207,7 @@
         </tr>
         <tr>
           <td><code>&lt;dl&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a> (If the element’s children include at least one name-value group)</td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a> <span class="small">(If the element’s children include at least one name-value group)</span></td>
         </tr>
         <tr>
           <td><code>&lt;dt&gt;</code></td>
@@ -245,15 +291,15 @@
         </tr>
         <tr>
           <td><code>&lt;img&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> (If the element has a <code>usemap</code> attribute)</td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> <span class="small">(If the element has a <code>usemap</code> attribute)</span></td>
         </tr>
         <tr>
           <td><code>&lt;input&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> (if the type attribute is not in the <code>hidden</code> state), <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a> (ff the type attribute is not in the <code>hidden</code> state)</td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> <span class="small">(if the type attribute is not in the <code>hidden</code> state)</span>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a> <span class="small">(If the type attribute is not in the <code>hidden</code> state)</span></td>
         </tr>
         <tr>
           <td><code>&lt;ins&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> (if it contains only <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> content), <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> <span class="small">(if it contains only <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> content)</span>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
           <td><code>&lt;kbd&gt;</code></td>
@@ -273,7 +319,7 @@
         </tr>
         <tr>
           <td><code>&lt;link&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a> (if the <code>itemprop</code> attribute is present, or if the element is allowed in the body), <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> (if the <code>itemprop</code> attribute is present, or if the element is allowed in the body)</td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a> <span class="small">(if the <code>itemprop</code> attribute is present, or if the element is allowed in the body)</span>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> <span class="small">(if the <code>itemprop</code> attribute is present, or if the element is allowed in the body)</span></td>
         </tr>
         <tr>
           <td><code>&lt;main&gt;</code></td>
@@ -281,7 +327,7 @@
         </tr>
         <tr>
           <td><code>&lt;map&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> (if it contains only <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> content), <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> <span class="small">(if it contains only <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> content)</span>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
           <td><code>&lt;mark&gt;</code></td>
@@ -289,7 +335,7 @@
         </tr>
         <tr>
           <td><code>&lt;meta&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a> (if the <code>itemprop</code> attribute is present, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> (if the <code>itemprop</code> attribute is present)</td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a> <span class="small">(if the <code>itemprop</code> attribute is present)</span>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> <span class="small">(if the <code>itemprop</code> attribute is present)</span></td>
         </tr>
         <tr>
           <td><code>&lt;meter&gt;</code></td>
@@ -305,7 +351,7 @@
         </tr>
         <tr>
           <td><code>&lt;object&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> (if the <code>usemap</code> attribute is present), <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> <span class="small">(if the <code>usemap</code> attribute is present)</span>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
           <td><code>&lt;ol&gt;</code></td>
@@ -473,7 +519,7 @@
         </tr>
         <tr>
           <td><code>&lt;ul&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a> (if the element’s children include at least one <code>&lt;li&gt;</code> element</td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a> <span class="small">(if the element’s children include at least one <code>&lt;li&gt;</code> element)</span></td>
         </tr>
         <tr>
           <td><code>&lt;var&gt;</code></td>
@@ -481,7 +527,7 @@
         </tr>
         <tr>
           <td><code>&lt;video&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> (if the element has a <code>controls</code> attribute), <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> <span class="small">(if the element has a <code>controls</code> attribute)</span>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
         </tr>
         <tr>
           <td><code>&lt;wbr&gt;</code></td>

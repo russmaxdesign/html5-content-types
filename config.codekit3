@@ -29,6 +29,13 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/assets/masters/categories.ai": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/assets/masters/categories.ai",
+		"oF": 0
+		},
 	"/assets/scss/_content-types.scss": {
 		"aP": 0,
 		"bl": 0,
