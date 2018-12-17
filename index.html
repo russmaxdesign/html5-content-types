@@ -73,14 +73,18 @@
     <h3>Interactive content</h3>
     <p>Interactive content is content that is specifically intended for user interaction.</p>
 
-    <p>There are also two lessor categories:</p>
+    <p>There are also some lessor categories:</p>
+
     <h3>Palpable content</h3>
     <p>Elements whose content model allows any flow content or phrasing content should have at least one node in its contents that is palpable content and that does not have the hidden attribute specified.</p>
 
     <h3>Sectioning root content</h3>
     <p>These elements can have their own outlines, but the sections and headings inside these elements do not contribute to the outlines of their ancestors.</p>
 
-    <h2>Content categories table</h2>
+    <h3>Script-supported content</h3>
+    <p>Script-supporting elements are those that do not represent anything themselves (i.e., they are not rendered), but are used to support scripts, e.g., to provide functionality for the user.</p>
+
+    <h2>Content categories table - all elements</h2>
     <table>
       <thead>
         <tr>
@@ -451,7 +455,7 @@
         </tr>
         <tr>
           <td><code>&lt;style&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a></td>
         </tr>
         <tr>
           <td><code>&lt;sub&gt;</code></td>
@@ -464,6 +468,10 @@
         <tr>
           <td><code>&lt;sup&gt;</code></td>
           <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
+        </tr>
+        <tr>
+          <td><code>&lt;svg&gt;</code></td>
+          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a></td>
         </tr>
         <tr>
           <td><code>&lt;table&gt;</code></td>
@@ -535,6 +543,303 @@
         </tr>
       </tbody>
     </table>
+
+    <h2>Metadata content</h2>
+    <ul>
+      <li><code>&lt;base&gt;</code></li>
+      <li><code>&lt;link&gt;</code></li>
+      <li><code>&lt;meta&gt;</code></li>
+      <li><code>&lt;noscript&gt;</code></li>
+      <li><code>&lt;script&gt;</code></li>
+      <li><code>&lt;style&gt;</code></li>
+      <li><code>&lt;template&gt;</code></li>
+      <li><code>&lt;title&gt;</code></li>
+    </ul>
+
+    <h2>Flow content</h2>
+    <ul>
+      <li><code>&lt;a&gt;</code></li>
+      <li><code>&lt;abbr&gt;</code></li>
+      <li><code>&lt;address&gt;</code></li>
+      <li><code>&lt;area&gt;</code></li>
+      <li><code>&lt;article&gt;</code></li>
+      <li><code>&lt;aside&gt;</code></li>
+      <li><code>&lt;audio&gt;</code></li>
+      <li><code>&lt;b&gt;</code></li>
+      <li><code>&lt;bdi&gt;</code></li>
+      <li><code>&lt;bdo&gt;</code></li>
+      <li><code>&lt;blockquote&gt;</code></li>
+      <li><code>&lt;br&gt;</code></li>
+      <li><code>&lt;button&gt;</code></li>
+      <li><code>&lt;canvas&gt;</code></li>
+      <li><code>&lt;cite&gt;</code></li>
+      <li><code>&lt;code&gt;</code></li>
+      <li><code>&lt;data&gt;</code></li>
+      <li><code>&lt;datalist&gt;</code></li>
+      <li><code>&lt;del&gt;</code></li>
+      <li><code>&lt;details&gt;</code></li>
+      <li><code>&lt;dfn&gt;</code></li>
+      <li><code>&lt;dialog&gt;</code></li>
+      <li><code>&lt;div&gt;</code></li>
+      <li><code>&lt;dl&gt;</code></li>
+      <li><code>&lt;em&gt;</code></li>
+      <li><code>&lt;embed&gt;</code></li>
+      <li><code>&lt;fieldset&gt;</code></li>
+      <li><code>&lt;figure&gt;</code></li>
+      <li><code>&lt;footer&gt;</code></li>
+      <li><code>&lt;form&gt;</code></li>
+      <li><code>&lt;h1&gt;</code></li>
+      <li><code>&lt;h2&gt;</code></li>
+      <li><code>&lt;h3&gt;</code></li>
+      <li><code>&lt;h4&gt;</code></li>
+      <li><code>&lt;h5&gt;</code></li>
+      <li><code>&lt;h6&gt;</code></li>
+      <li><code>&lt;header&gt;</code></li>
+      <li><code>&lt;hr&gt;</code></li>
+      <li><code>&lt;i&gt;</code></li>
+      <li><code>&lt;iframe&gt;</code></li>
+      <li><code>&lt;img&gt;</code></li>
+      <li><code>&lt;input&gt;</code></li>
+      <li><code>&lt;ins&gt;</code></li>
+      <li><code>&lt;kbd&gt;</code></li>
+      <li><code>&lt;label&gt;</code></li>
+      <li><code>&lt;link&gt;</code></li>
+      <li><code>&lt;main&gt;</code></li>
+      <li><code>&lt;map&gt;</code></li>
+      <li><code>&lt;mark&gt;</code></li>
+      <li><code>&lt;meta&gt;</code></li>
+      <li><code>&lt;meter&gt;</code></li>
+      <li><code>&lt;nav&gt;</code></li>
+      <li><code>&lt;noscript&gt;</code></li>
+      <li><code>&lt;object&gt;</code></li>
+      <li><code>&lt;ol&gt;</code></li>
+      <li><code>&lt;output&gt;</code></li>
+      <li><code>&lt;p&gt;</code></li>
+      <li><code>&lt;picture&gt;</code></li>
+      <li><code>&lt;pre&gt;</code></li>
+      <li><code>&lt;progress&gt;</code></li>
+      <li><code>&lt;q&gt;</code></li>
+      <li><code>&lt;ruby&gt;</code></li>
+      <li><code>&lt;s&gt;</code></li>
+      <li><code>&lt;samp&gt;</code></li>
+      <li><code>&lt;script&gt;</code></li>
+      <li><code>&lt;section&gt;</code></li>
+      <li><code>&lt;select&gt;</code></li>
+      <li><code>&lt;small&gt;</code></li>
+      <li><code>&lt;span&gt;</code></li>
+      <li><code>&lt;strong&gt;</code></li>
+      <li><code>&lt;style&gt;</code></li>
+      <li><code>&lt;sub&gt;</code></li>
+      <li><code>&lt;sup&gt;</code></li>
+      <li><code>&lt;svg&gt;</code></li>
+      <li><code>&lt;table&gt;</code></li>
+      <li><code>&lt;template&gt;</code></li>
+      <li><code>&lt;textarea&gt;</code></li>
+      <li><code>&lt;time&gt;</code></li>
+      <li><code>&lt;u&gt;</code></li>
+      <li><code>&lt;ul&gt;</code></li>
+      <li><code>&lt;var&gt;</code></li>
+      <li><code>&lt;video&gt;</code></li>
+      <li><code>&lt;wbr&gt;</code></li>
+    </ul>
+
+    <h2>Sectioning content</h2>
+    <ul>
+      <li><code>&lt;article&gt;</code></li>
+      <li><code>&lt;aside&gt;</code></li>
+      <li><code>&lt;nav&gt;</code></li>
+      <li><code>&lt;section&gt;</code></li>
+    </ul>
+
+    <h2>Heading content</h2>
+    <ul>
+      <li><code>&lt;h1&gt;</code></li>
+      <li><code>&lt;h2&gt;</code></li>
+      <li><code>&lt;h3&gt;</code></li>
+      <li><code>&lt;h4&gt;</code></li>
+      <li><code>&lt;h5&gt;</code></li>
+      <li><code>&lt;h6&gt;</code></li>
+    </ul>
+
+    <h2>Phrasing content</h2>
+    <ul>
+      <li><code>&lt;a&gt;</code></li>
+      <li><code>&lt;abbr&gt;</code></li>
+      <li><code>&lt;area&gt;</code></li>
+      <li><code>&lt;audio&gt;</code></li>
+      <li><code>&lt;b&gt;</code></li>
+      <li><code>&lt;bdi&gt;</code></li>
+      <li><code>&lt;bdo&gt;</code></li>
+      <li><code>&lt;br&gt;</code></li>
+      <li><code>&lt;button&gt;</code></li>
+      <li><code>&lt;canvas&gt;</code></li>
+      <li><code>&lt;cite&gt;</code></li>
+      <li><code>&lt;code&gt;</code></li>
+      <li><code>&lt;data&gt;</code></li>
+      <li><code>&lt;datalist&gt;</code></li>
+      <li><code>&lt;del&gt;</code></li>
+      <li><code>&lt;dfn&gt;</code></li>
+      <li><code>&lt;em&gt;</code></li>
+      <li><code>&lt;embed&gt;</code></li>
+      <li><code>&lt;i&gt;</code></li>
+      <li><code>&lt;iframe&gt;</code></li>
+      <li><code>&lt;img&gt;</code></li>
+      <li><code>&lt;input&gt;</code></li>
+      <li><code>&lt;ins&gt;</code></li>
+      <li><code>&lt;kbd&gt;</code></li>
+      <li><code>&lt;label&gt;</code></li>
+      <li><code>&lt;link&gt;</code></li>
+      <li><code>&lt;map&gt;</code></li>
+      <li><code>&lt;mark&gt;</code></li>
+      <li><code>&lt;math&gt;</code></li>
+      <li><code>&lt;meter&gt;</code></li>
+      <li><code>&lt;noscript&gt;</code></li>
+      <li><code>&lt;object&gt;</code></li>
+      <li><code>&lt;output&gt;</code></li>
+      <li><code>&lt;picture&gt;</code></li>
+      <li><code>&lt;progress&gt;</code></li>
+      <li><code>&lt;q&gt;</code></li>
+      <li><code>&lt;ruby&gt;</code></li>
+      <li><code>&lt;s&gt;</code></li>
+      <li><code>&lt;samp&gt;</code></li>
+      <li><code>&lt;script&gt;</code></li>
+      <li><code>&lt;select&gt;</code></li>
+      <li><code>&lt;small&gt;</code></li>
+      <li><code>&lt;span&gt;</code></li>
+      <li><code>&lt;strong&gt;</code></li>
+      <li><code>&lt;sub&gt;</code></li>
+      <li><code>&lt;sup&gt;</code></li>
+      <li><code>&lt;svg&gt;</code></li>
+      <li><code>&lt;template&gt;</code></li>
+      <li><code>&lt;textarea&gt;</code></li>
+      <li><code>&lt;time&gt;</code></li>
+      <li><code>&lt;u&gt;</code></li>
+      <li><code>&lt;var&gt;</code></li>
+      <li><code>&lt;video&gt;</code></li>
+      <li><code>&lt;wbr&gt;</code></li>
+    </ul>
+
+    <h2>Embedded content</h2>
+    <ul>
+      <li><code>&lt;audio&gt;</code></li>
+      <li><code>&lt;canvas&gt;</code></li>
+      <li><code>&lt;embed&gt;</code></li>
+      <li><code>&lt;iframe&gt;</code></li>
+      <li><code>&lt;img&gt;</code></li>
+      <li><code>&lt;math&gt;</code></li>
+      <li><code>&lt;object&gt;</code></li>
+      <li><code>&lt;picture&gt;</code></li>
+      <li><code>&lt;svg&gt;</code></li>
+      <li><code>&lt;video&gt;</code></li>
+    </ul>
+
+    <h2>Interactive content</h2>
+    <ul>
+      <li><code>&lt;a&gt;</code></li>
+      <li><code>&lt;audio&gt;</code></li>
+      <li><code>&lt;button&gt;</code></li>
+      <li><code>&lt;details&gt;</code></li>
+      <li><code>&lt;embed&gt;</code></li>
+      <li><code>&lt;iframe&gt;</code></li>
+      <li><code>&lt;img&gt;</code></li>
+      <li><code>&lt;input&gt;</code></li>
+      <li><code>&lt;label&gt;</code></li>
+      <li><code>&lt;select&gt;</code></li>
+      <li><code>&lt;textarea&gt;</code></li>
+      <li><code>&lt;video&gt;</code></li>
+    </ul>
+
+    <h2>Palpable content</h2>
+    <ul>
+      <li><code>&lt;a&gt;</code></li>
+      <li><code>&lt;abbr&gt;</code></li>
+      <li><code>&lt;address&gt;</code></li>
+      <li><code>&lt;article&gt;</code></li>
+      <li><code>&lt;aside&gt;</code></li>
+      <li><code>&lt;audio&gt;</code></li>
+      <li><code>&lt;b&gt;</code></li>
+      <li><code>&lt;bdi&gt;</code></li>
+      <li><code>&lt;bdo&gt;</code></li>
+      <li><code>&lt;blockquote&gt;</code></li>
+      <li><code>&lt;button&gt;</code></li>
+      <li><code>&lt;canvas&gt;</code></li>
+      <li><code>&lt;cite&gt;</code></li>
+      <li><code>&lt;code&gt;</code></li>
+      <li><code>&lt;data&gt;</code></li>
+      <li><code>&lt;details&gt;</code></li>
+      <li><code>&lt;dfn&gt;</code></li>
+      <li><code>&lt;div&gt;</code></li>
+      <li><code>&lt;dl&gt;</code></li>
+      <li><code>&lt;em&gt;</code></li>
+      <li><code>&lt;embed&gt;</code></li>
+      <li><code>&lt;fieldset&gt;</code></li>
+      <li><code>&lt;figure&gt;</code></li>
+      <li><code>&lt;footer&gt;</code></li>
+      <li><code>&lt;form&gt;</code></li>
+      <li><code>&lt;h1&gt;</code></li>
+      <li><code>&lt;h2&gt;</code></li>
+      <li><code>&lt;h3&gt;</code></li>
+      <li><code>&lt;h4&gt;</code></li>
+      <li><code>&lt;h5&gt;</code></li>
+      <li><code>&lt;h6&gt;</code></li>
+      <li><code>&lt;header&gt;</code></li>
+      <li><code>&lt;i&gt;</code></li>
+      <li><code>&lt;iframe&gt;</code></li>
+      <li><code>&lt;img&gt;</code></li>
+      <li><code>&lt;input&gt;</code></li>
+      <li><code>&lt;ins&gt;</code></li>
+      <li><code>&lt;kbd&gt;</code></li>
+      <li><code>&lt;label&gt;</code></li>
+      <li><code>&lt;main&gt;</code></li>
+      <li><code>&lt;map&gt;</code></li>
+      <li><code>&lt;mark&gt;</code></li>
+      <li><code>&lt;math&gt;</code></li>
+      <li><code>&lt;meter&gt;</code></li>
+      <li><code>&lt;nav&gt;</code></li>
+      <li><code>&lt;object&gt;</code></li>
+      <li><code>&lt;ol&gt;</code></li>
+      <li><code>&lt;output&gt;</code></li>
+      <li><code>&lt;p&gt;</code></li>
+      <li><code>&lt;pre&gt;</code></li>
+      <li><code>&lt;progress&gt;</code></li>
+      <li><code>&lt;q&gt;</code></li>
+      <li><code>&lt;ruby&gt;</code></li>
+      <li><code>&lt;s&gt;</code></li>
+      <li><code>&lt;samp&gt;</code></li>
+      <li><code>&lt;section&gt;</code></li>
+      <li><code>&lt;select&gt;</code></li>
+      <li><code>&lt;small&gt;</code></li>
+      <li><code>&lt;span&gt;</code></li>
+      <li><code>&lt;strong&gt;</code></li>
+      <li><code>&lt;sub&gt;</code></li>
+      <li><code>&lt;sup&gt;</code></li>
+      <li><code>&lt;svg&gt;</code></li>
+      <li><code>&lt;table&gt;</code></li>
+      <li><code>&lt;textarea&gt;</code></li>
+      <li><code>&lt;time&gt;</code></li>
+      <li><code>&lt;u&gt;</code></li>
+      <li><code>&lt;ul&gt;</code></li>
+      <li><code>&lt;var&gt;</code></li>
+      <li><code>&lt;video&gt;</code></li>
+    </ul>
+
+    <h2>Script-supported content</h2>
+    <ul>
+      <li><code>&lt;canvas&gt;</code></li>
+      <li><code>&lt;script&gt;</code></li>
+      <li><code>&lt;template&gt;</code></li>
+    </ul>
+
+    <h2>Sectioning-root content</h2>
+    <ul>
+      <li><code>&lt;blockquote&gt;</code></li>
+      <li><code>&lt;body&gt;</code></li>
+      <li><code>&lt;details&gt;</code></li>
+      <li><code>&lt;dialog&gt;</code></li>
+      <li><code>&lt;fieldset&gt;</code></li>
+      <li><code>&lt;figure&gt;</code></li>
+      <li><code>&lt;td&gt;</code></li>
+    </ul>
 
     <p><a href="https://github.com/russmaxdesign/content-types">Github Page</a></p>
   </div>
