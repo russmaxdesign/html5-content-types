@@ -2,848 +2,450 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>HTML Content Model Categories</title>
+  <title>HTML test cases</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="assets/css/examples.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container-wide">
-    <h1>HTML Content Model Categories</h1>
-    <p><a href="https://github.com/russmaxdesign/content-types">Github Page</a></p>
+  <h1>HTML test cases</h1>
+  <p>A series of HTML test cases to determine how they are announced in different screen reader / browser combinations.</p>
+  <p><a class="button-secondary small" href="https://github.com/russmaxdesign/accessible-forms" aria-label="Git repository for all tests" target="_blank">Git repository</a></p>
 
-    <p>In HTML 4.01, there was a distinction between block-level and inline elements. In HTML 5, this distinction between block and inline has been replaced with a more complex set of content categories.</p>
-    <p>Each element in HTML falls into zero or more categories that group elements with similar characteristics.</p>
-
-    <h2>Content model categories</h2>
-    <div style="max-width: 700px">
-      <?xml version="1.0" encoding="utf-8"?>
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 770 420" style="enable-background:new 0 0 770 420;" xml:space="preserve">
-        <title>Diagram showing content model categories overlapping</title>
-        <style type="text/css">
-          .st1{opacity:0.2;fill:#AF9831;}
-          .st2{opacity:0.2;fill:#3A78B4;}
-          .st3{opacity:0.2;fill:#50893E;}
-          .st4{opacity:0.2;fill:#B06A28;}
-          .st5{opacity:0.2;fill:#814B9E;}
-          .st6{font-family:'HelveticaNeue-Bold';}
-          .st7{font-size:28px;}
-          .st8{opacity:0.2;fill:#8C5060;}
-          .st9{fill:none;stroke:#231F20;stroke-width:2;stroke-miterlimit:10;}
-        </style>
-        <ellipse class="st9" cx="385" cy="210" rx="375" ry="200"/>
-        <ellipse class="st1" cx="192" cy="165" rx="150" ry="75"/>
-        <ellipse class="st2" cx="325" cy="208" rx="120" ry="125"/>
-        <ellipse class="st3" cx="572" cy="141" rx="115" ry="65"/>
-        <ellipse class="st4" cx="572" cy="283" rx="115" ry="65"/>
-        <ellipse class="st5" cx="192" cy="335" rx="150" ry="75"/>
-        <ellipse class="st8" cx="325" cy="210" rx="105" ry="40"/>
-        <ellipse class="st9" cx="192" cy="165" rx="150" ry="75"/>
-        <ellipse class="st9" cx="325" cy="208" rx="120" ry="125"/>
-        <ellipse class="st9" cx="572" cy="141" rx="115" ry="65"/>
-        <ellipse class="st9" cx="572" cy="283" rx="115" ry="65"/>
-        <ellipse class="st9" cx="192" cy="335" rx="150" ry="75"/>
-        <ellipse class="st9" cx="325" cy="210" rx="105" ry="40"/>
-        <text transform="matrix(1 0 0 1 372 58)" class="st6 st7">Flow</text>
-        <text transform="matrix(1 0 0 1 516 146)" class="st6 st7">Heading</text>
-        <text transform="matrix(1 0 0 1 501 290)" class="st6 st7">Sectioning</text>
-        <text transform="matrix(1 0 0 1 134 348)" class="st6 st7">Metadata</text>
-        <text transform="matrix(1 0 0 1 57 172)" class="st6 st7">Interactive</text>
-        <text transform="matrix(1 0 0 1 265 153)" class="st6 st7">Phrasing</text>
-        <text transform="matrix(1 0 0 1 252 218)" class="st6 st7">Embedded</text>
-      </svg>
-    </div>
-
-    <h3>Metadata content</h3>
-    <p>Metadata content is content that sets up the presentation or behaviour of the rest of the content, or that sets up the relationship of the document with other documents.</p>
-    <h3>Flow content</h3>
-    <p>Most elements that are used in the body of documents and applications are categorised as flow content. The only elements that are not considered flow elements are a subset of metadata elements. The older "block-level" category roughly corresponds to this flow content category.</p>
-    <h3>Phrasing content</h3>
-    <p>Phrasing content is the text of the document, as well as elements that mark up that text within paragraphs. The older "inline" category corresponds to phrasing content.</p>
-
-    <h3>Sectioning content</h3>
-    <p>Sectioning content is content that defines the scope of headings and footers.</p>
-
-    <h3>Heading content</h3>
-    <p>Heading content defines the header of a section.</p>
-
-    <h3>Embedded content</h3>
-    <p>Embedded content is content that imports another resource into the document.</p>
-
-    <h3>Interactive content</h3>
-    <p>Interactive content is content that is specifically intended for user interaction.</p>
-
-    <p>There are also some lessor categories:</p>
-
-    <h3>Palpable content</h3>
-    <p>Elements whose content model allows any flow content or phrasing content should have at least one node in its contents that is palpable content and that does not have the hidden attribute specified.</p>
-
-    <h3>Sectioning root content</h3>
-    <p>These elements can have their own outlines, but the sections and headings inside these elements do not contribute to the outlines of their ancestors.</p>
-
-    <h3>Script-supported content</h3>
-    <p>Script-supporting elements are those that do not represent anything themselves (i.e., they are not rendered), but are used to support scripts, e.g., to provide functionality for the user.</p>
-
-    <h2>Content categories table - all elements</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Element</th>
-          <th>Categories</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>&lt;a&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> <span class="small">(if the element has an <code>href</code> attribute)</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;abbr&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;address&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;area&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a> <span class="small">(if it is a descendant of a <code>&lt;map&gt;</code> element)</span>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> <span class="small">(if it is a descendant of a <code>&lt;map&gt;</code> element)</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;article&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#sectioning-content">sectioning</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;aside&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#sectioning-content">sectioning</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;audio&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> <span class="small">(if the <code>controls</code> attribute is present)</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;b&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;base&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;bdi&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;bdo&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;blockquote&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;body&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;br&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;button&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;canvas&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;caption&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;cite&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;code&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;col&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;colgroup&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;data&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;datalist&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;dd&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;del&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> <span class="small">(if it contains only <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> content)</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;details&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;dfn&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;dialog&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;div&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;dl&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a> <span class="small">(If the element’s children include at least one name-value group)</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;dt&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;em&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;embed&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;fieldset&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;figcaption&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;figure&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;footer&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;form&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;h1&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#heading-content">heading</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;h2&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#heading-content">heading</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;h3&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#heading-content">heading</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;h4&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#heading-content">heading</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;h5&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#heading-content">heading</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;h6&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#heading-content">heading</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;head&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;header&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;hr&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;html&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;i&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;iframe&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;img&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> <span class="small">(If the element has a <code>usemap</code> attribute)</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;input&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> <span class="small">(if the type attribute is not in the <code>hidden</code> state)</span>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a> <span class="small">(If the type attribute is not in the <code>hidden</code> state)</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;ins&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> <span class="small">(if it contains only <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> content)</span>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;kbd&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;label&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;legend&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;li&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;link&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a> <span class="small">(if the <code>itemprop</code> attribute is present, or if the element is allowed in the body)</span>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> <span class="small">(if the <code>itemprop</code> attribute is present, or if the element is allowed in the body)</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;main&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;map&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> <span class="small">(if it contains only <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> content)</span>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;mark&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;meta&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a> <span class="small">(if the <code>itemprop</code> attribute is present)</span>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a> <span class="small">(if the <code>itemprop</code> attribute is present)</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;meter&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;nav&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#sectioning-content">sectioning</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;noscript&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;object&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> <span class="small">(if the <code>usemap</code> attribute is present)</span>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;ol&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;optgroup&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;option&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;output&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;p&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;param&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;picture&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;pre&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;progress&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;q&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;rb&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;rp&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;rt&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;rtc&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;ruby&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;s&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;samp&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;script&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;section&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#sectioning-content">sectioning</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;select&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;small&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;source&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;span&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;strong&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;style&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;sub&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;summary&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;sup&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;svg&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;table&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;tbody&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;td&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/sections.html#sectioning-roots">sectioning root</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;template&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a>, <a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;textarea&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;tfoot&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;th&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;thead&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;time&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;title&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#metadata-content">metadata</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;tr&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;track&gt;</code></td>
-          <td>none</td>
-        </tr>
-        <tr>
-          <td><code>&lt;u&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;ul&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a> <span class="small">(if the element’s children include at least one <code>&lt;li&gt;</code> element)</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;var&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;video&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a>, <a href="https://www.w3.org/TR/html52/dom.html#embedded-content">embedded</a>, <a href="https://www.w3.org/TR/html52/dom.html#interactive-content">interactive</a> <span class="small">(if the element has a <code>controls</code> attribute)</span>, <a href="https://www.w3.org/TR/html52/dom.html#palpable-content">palpable</a></td>
-        </tr>
-        <tr>
-          <td><code>&lt;wbr&gt;</code></td>
-          <td><a href="https://www.w3.org/TR/html52/dom.html#flow-content">flow</a>, <a href="https://www.w3.org/TR/html52/dom.html#phrasing-content">phrasing</a></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h2>Metadata content</h2>
-    <ul>
-      <li><code>&lt;base&gt;</code></li>
-      <li><code>&lt;link&gt;</code></li>
-      <li><code>&lt;meta&gt;</code></li>
-      <li><code>&lt;noscript&gt;</code></li>
-      <li><code>&lt;script&gt;</code></li>
-      <li><code>&lt;style&gt;</code></li>
-      <li><code>&lt;template&gt;</code></li>
-      <li><code>&lt;title&gt;</code></li>
+  <section>
+    <h2>Page content sections</h2>
+    <ul class="page-contents-list" aria-label="Page contents">
+      <li>&darr; <a href="#basic">Basic form control and label tests</a></li>
+      <li>&darr; <a href="#fieldset"><code>&lt;fieldset&gt;</code> tests</a></li>
+      <li>&darr; <a href="#fieldset-error"><code>&lt;fieldset&gt;</code> with errors tests</a></li>
+      <li>&darr; <a href="#nested">Nested <code>&lt;fieldset&gt;</code> tests</a></li>
+      <li>&darr; <a href="#help">Help text and error messages associated with form control tests</a></li>
+      <li>&darr; <a href="#required">Required field tests</a></li>
+      <li>&darr; <a href="#accessible-button"><code>&lt;button&gt;</code> accessible name and description tests</a></li>
+      <li>&darr; <a href="#accessible-link"><code>&lt;a&gt;</code> accessible name and description tests</a></li>
+      <li>&darr; <a href="#accessible-input"><code>&lt;input&gt;</code> accessible name and description tests</a></li>
+      <li>&darr; <a href="#accessible-table"><code>&lt;table&gt;</code> accessible name and description tests</a></li>
+      <li>&darr; <a href="#invalid"><code>aria-invalid</code> tests</a></li>
+      <li>&darr; <a href="#attributes">Form-based attribute tests</a></li>
+      <li>&darr; <a href="#disabled"><code>disabled</code> attribute tests</a></li>
+      <li>&darr; <a href="#readonly"><code>readonly</code> and <code>aria-readonly</code> attribute tests</a></li>
+      <li>&darr; <a href="#landmark">ARIA landmark tests</a></li>
+      <li>&darr; <a href="#header"><code>&lt;header&gt;</code> scope tests</a></li>
+      <li>&darr; <a href="#live">Live region tests</a></li>
+      <li>&darr; <a href="#onsubmit">onsubmit tests</a></li>
+      <li>&darr; <a href="#rotor">VoiceOver Rotor tests</a></li>
+      <li>&darr; <a href="#technology">Technology details</a></li>
     </ul>
+  </section>
+  <hr>
 
-    <h2>Flow content</h2>
-    <ul>
-      <li><code>&lt;a&gt;</code></li>
-      <li><code>&lt;abbr&gt;</code></li>
-      <li><code>&lt;address&gt;</code></li>
-      <li><code>&lt;area&gt;</code></li>
-      <li><code>&lt;article&gt;</code></li>
-      <li><code>&lt;aside&gt;</code></li>
-      <li><code>&lt;audio&gt;</code></li>
-      <li><code>&lt;b&gt;</code></li>
-      <li><code>&lt;bdi&gt;</code></li>
-      <li><code>&lt;bdo&gt;</code></li>
-      <li><code>&lt;blockquote&gt;</code></li>
-      <li><code>&lt;br&gt;</code></li>
-      <li><code>&lt;button&gt;</code></li>
-      <li><code>&lt;canvas&gt;</code></li>
-      <li><code>&lt;cite&gt;</code></li>
-      <li><code>&lt;code&gt;</code></li>
-      <li><code>&lt;data&gt;</code></li>
-      <li><code>&lt;datalist&gt;</code></li>
-      <li><code>&lt;del&gt;</code></li>
-      <li><code>&lt;details&gt;</code></li>
-      <li><code>&lt;dfn&gt;</code></li>
-      <li><code>&lt;dialog&gt;</code></li>
-      <li><code>&lt;div&gt;</code></li>
-      <li><code>&lt;dl&gt;</code></li>
-      <li><code>&lt;em&gt;</code></li>
-      <li><code>&lt;embed&gt;</code></li>
-      <li><code>&lt;fieldset&gt;</code></li>
-      <li><code>&lt;figure&gt;</code></li>
-      <li><code>&lt;footer&gt;</code></li>
-      <li><code>&lt;form&gt;</code></li>
-      <li><code>&lt;h1&gt;</code></li>
-      <li><code>&lt;h2&gt;</code></li>
-      <li><code>&lt;h3&gt;</code></li>
-      <li><code>&lt;h4&gt;</code></li>
-      <li><code>&lt;h5&gt;</code></li>
-      <li><code>&lt;h6&gt;</code></li>
-      <li><code>&lt;header&gt;</code></li>
-      <li><code>&lt;hr&gt;</code></li>
-      <li><code>&lt;i&gt;</code></li>
-      <li><code>&lt;iframe&gt;</code></li>
-      <li><code>&lt;img&gt;</code></li>
-      <li><code>&lt;input&gt;</code></li>
-      <li><code>&lt;ins&gt;</code></li>
-      <li><code>&lt;kbd&gt;</code></li>
-      <li><code>&lt;label&gt;</code></li>
-      <li><code>&lt;link&gt;</code></li>
-      <li><code>&lt;main&gt;</code></li>
-      <li><code>&lt;map&gt;</code></li>
-      <li><code>&lt;mark&gt;</code></li>
-      <li><code>&lt;meta&gt;</code></li>
-      <li><code>&lt;meter&gt;</code></li>
-      <li><code>&lt;nav&gt;</code></li>
-      <li><code>&lt;noscript&gt;</code></li>
-      <li><code>&lt;object&gt;</code></li>
-      <li><code>&lt;ol&gt;</code></li>
-      <li><code>&lt;output&gt;</code></li>
-      <li><code>&lt;p&gt;</code></li>
-      <li><code>&lt;picture&gt;</code></li>
-      <li><code>&lt;pre&gt;</code></li>
-      <li><code>&lt;progress&gt;</code></li>
-      <li><code>&lt;q&gt;</code></li>
-      <li><code>&lt;ruby&gt;</code></li>
-      <li><code>&lt;s&gt;</code></li>
-      <li><code>&lt;samp&gt;</code></li>
-      <li><code>&lt;script&gt;</code></li>
-      <li><code>&lt;section&gt;</code></li>
-      <li><code>&lt;select&gt;</code></li>
-      <li><code>&lt;small&gt;</code></li>
-      <li><code>&lt;span&gt;</code></li>
-      <li><code>&lt;strong&gt;</code></li>
-      <li><code>&lt;style&gt;</code></li>
-      <li><code>&lt;sub&gt;</code></li>
-      <li><code>&lt;sup&gt;</code></li>
-      <li><code>&lt;svg&gt;</code></li>
-      <li><code>&lt;table&gt;</code></li>
-      <li><code>&lt;template&gt;</code></li>
-      <li><code>&lt;textarea&gt;</code></li>
-      <li><code>&lt;time&gt;</code></li>
-      <li><code>&lt;u&gt;</code></li>
-      <li><code>&lt;ul&gt;</code></li>
-      <li><code>&lt;var&gt;</code></li>
-      <li><code>&lt;video&gt;</code></li>
-      <li><code>&lt;wbr&gt;</code></li>
+  <section id="basic">
+    <h2>Basic form control and label tests</h2>
+    <p>Tests to determine how form controls and their associated <code>&lt;label&gt;</code> and <code>&lt;legend&gt;</code> elements are announced. In some cases, the form element does not require or should not have a <code>&lt;label&gt;</code>.</p>
+    <h3>Inputs</h3>
+    <ul class="main-list">
+      <li>&rarr; <a href="01-input-button.html"><code>&lt;input type="button"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-checkbox.html"><code>&lt;input type="checkbox"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-color.html"><code>&lt;input type="color"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-date.html"><code>&lt;input type="date"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-datetime-local.html"><code>&lt;input type="datetime-local"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-email.html"><code>&lt;input type="email"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-file.html"><code>&lt;input type="file"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-month.html"><code>&lt;input type="month"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-number.html"><code>&lt;input type="number"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-password.html"><code>&lt;input type="password"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-radio.html"><code>&lt;input type="radio"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-range.html"><code>&lt;input type="range"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-reset.html"><code>&lt;input type="reset"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-search.html"><code>&lt;input type="search"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-submit.html"><code>&lt;input type="submit"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-tel.html"><code>&lt;input type="tel"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-text.html"><code>&lt;input type="text"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-time.html"><code>&lt;input type="time"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-url.html"><code>&lt;input type="url"&gt;</code></a></li>
+      <li>&rarr; <a href="01-input-week.html"><code>&lt;input type="week"&gt;</code></a></li>
     </ul>
-
-    <h2>Sectioning content</h2>
-    <ul>
-      <li><code>&lt;article&gt;</code></li>
-      <li><code>&lt;aside&gt;</code></li>
-      <li><code>&lt;nav&gt;</code></li>
-      <li><code>&lt;section&gt;</code></li>
+    <h3>Other elements</h3>
+    <ul class="main-list">
+      <li>&rarr; <a href="04-button.html"><code>&lt;button&gt;</code></a></li>
+      <li>&rarr; <a href="02-select.html"><code>&lt;select&gt;</code></a></li>
+      <li>&rarr; <a href="02-select-multiple.html"><code>&lt;select&gt;</code> with <code>multiple</code></a></li>
+      <li>&rarr; <a href="02-select-optgroup.html"><code>&lt;optgroup&gt;</code> within <code>&lt;select&gt;</code></a></li>
+      <li>&rarr; <a href="03-textarea.html"><code>&lt;textarea&gt;</code></a></li>
     </ul>
+    <p><a class="button-secondary small" href="support-basic-form-controls.html">Basic form controls support chart</a></p>
+  </section>
+  <hr>
 
-    <h2>Heading content</h2>
-    <ul>
-      <li><code>&lt;h1&gt;</code></li>
-      <li><code>&lt;h2&gt;</code></li>
-      <li><code>&lt;h3&gt;</code></li>
-      <li><code>&lt;h4&gt;</code></li>
-      <li><code>&lt;h5&gt;</code></li>
-      <li><code>&lt;h6&gt;</code></li>
+  <section id="fieldset">
+    <h2><code>&lt;fieldset&gt;</code> tests</h2>
+    <p>Tests to determine how <code>&lt;fieldset&gt;</code> elements are announced.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="fieldset.html">Basic <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code></a></li>
+      <li>&rarr; <a href="fieldset-buttons.html"><code>&lt;fieldset&gt;</code> and buttons</a></li>
     </ul>
-
-    <h2>Phrasing content</h2>
-    <ul>
-      <li><code>&lt;a&gt;</code></li>
-      <li><code>&lt;abbr&gt;</code></li>
-      <li><code>&lt;area&gt;</code></li>
-      <li><code>&lt;audio&gt;</code></li>
-      <li><code>&lt;b&gt;</code></li>
-      <li><code>&lt;bdi&gt;</code></li>
-      <li><code>&lt;bdo&gt;</code></li>
-      <li><code>&lt;br&gt;</code></li>
-      <li><code>&lt;button&gt;</code></li>
-      <li><code>&lt;canvas&gt;</code></li>
-      <li><code>&lt;cite&gt;</code></li>
-      <li><code>&lt;code&gt;</code></li>
-      <li><code>&lt;data&gt;</code></li>
-      <li><code>&lt;datalist&gt;</code></li>
-      <li><code>&lt;del&gt;</code></li>
-      <li><code>&lt;dfn&gt;</code></li>
-      <li><code>&lt;em&gt;</code></li>
-      <li><code>&lt;embed&gt;</code></li>
-      <li><code>&lt;i&gt;</code></li>
-      <li><code>&lt;iframe&gt;</code></li>
-      <li><code>&lt;img&gt;</code></li>
-      <li><code>&lt;input&gt;</code></li>
-      <li><code>&lt;ins&gt;</code></li>
-      <li><code>&lt;kbd&gt;</code></li>
-      <li><code>&lt;label&gt;</code></li>
-      <li><code>&lt;link&gt;</code></li>
-      <li><code>&lt;map&gt;</code></li>
-      <li><code>&lt;mark&gt;</code></li>
-      <li><code>&lt;math&gt;</code></li>
-      <li><code>&lt;meter&gt;</code></li>
-      <li><code>&lt;noscript&gt;</code></li>
-      <li><code>&lt;object&gt;</code></li>
-      <li><code>&lt;output&gt;</code></li>
-      <li><code>&lt;picture&gt;</code></li>
-      <li><code>&lt;progress&gt;</code></li>
-      <li><code>&lt;q&gt;</code></li>
-      <li><code>&lt;ruby&gt;</code></li>
-      <li><code>&lt;s&gt;</code></li>
-      <li><code>&lt;samp&gt;</code></li>
-      <li><code>&lt;script&gt;</code></li>
-      <li><code>&lt;select&gt;</code></li>
-      <li><code>&lt;small&gt;</code></li>
-      <li><code>&lt;span&gt;</code></li>
-      <li><code>&lt;strong&gt;</code></li>
-      <li><code>&lt;sub&gt;</code></li>
-      <li><code>&lt;sup&gt;</code></li>
-      <li><code>&lt;svg&gt;</code></li>
-      <li><code>&lt;template&gt;</code></li>
-      <li><code>&lt;textarea&gt;</code></li>
-      <li><code>&lt;time&gt;</code></li>
-      <li><code>&lt;u&gt;</code></li>
-      <li><code>&lt;var&gt;</code></li>
-      <li><code>&lt;video&gt;</code></li>
-      <li><code>&lt;wbr&gt;</code></li>
+    <h3>Checkboxes</h3>
+    <ul class="main-list">
+      <li>&rarr; <a href="fieldset-checkbox-group.html">Checkbox group with list</a></li>
+      <li>&rarr; <a href="fieldset-checkbox-group-presentation.html">Checkbox group with list and <code>role="presentation"</code></a></li>
+      <li>&rarr; <a href="fieldset-checkbox-group-without-list.html">Checkbox group without a list</a></li>
+      <li>&rarr; <a href="fieldset-checkbox-group-role-group.html">Checkbox group using <code>role="group"</code></a></li>
     </ul>
-
-    <h2>Embedded content</h2>
-    <ul>
-      <li><code>&lt;audio&gt;</code></li>
-      <li><code>&lt;canvas&gt;</code></li>
-      <li><code>&lt;embed&gt;</code></li>
-      <li><code>&lt;iframe&gt;</code></li>
-      <li><code>&lt;img&gt;</code></li>
-      <li><code>&lt;math&gt;</code></li>
-      <li><code>&lt;object&gt;</code></li>
-      <li><code>&lt;picture&gt;</code></li>
-      <li><code>&lt;svg&gt;</code></li>
-      <li><code>&lt;video&gt;</code></li>
+    <h3>Radio buttons</h3>
+    <ul class="main-list">
+      <li>&rarr; <a href="fieldset-radio-group.html">Radio group with list</a></li>
+      <li>&rarr; <a href="fieldset-radio-group-presentation.html">Radio group with list and <code>role="presentation"</code></a></li>
+      <li>&rarr; <a href="fieldset-radio-group-without-list.html">Radio group without a list</a></li>
+      <li>&rarr; <a href="fieldset-radio-group-role-radiogroup.html">Radio group using <code>role="radiogroup"</code></a></li>
     </ul>
+    <p><a class="button-secondary small" href="support-fieldsets.html">Fieldset support chart</a></p>
+  </section>
+  <hr>
 
-    <h2>Interactive content</h2>
-    <ul>
-      <li><code>&lt;a&gt;</code></li>
-      <li><code>&lt;audio&gt;</code></li>
-      <li><code>&lt;button&gt;</code></li>
-      <li><code>&lt;details&gt;</code></li>
-      <li><code>&lt;embed&gt;</code></li>
-      <li><code>&lt;iframe&gt;</code></li>
-      <li><code>&lt;img&gt;</code></li>
-      <li><code>&lt;input&gt;</code></li>
-      <li><code>&lt;label&gt;</code></li>
-      <li><code>&lt;select&gt;</code></li>
-      <li><code>&lt;textarea&gt;</code></li>
-      <li><code>&lt;video&gt;</code></li>
+  <section id="fieldset-error">
+    <h2><code>&lt;fieldset&gt;</code> with errors tests</h2>
+    <p>Tests to determine how error messages associated with radio groups are announced.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="fieldset-error01.html">Radio group with error - no programmatic association</a></li>
+      <li>&rarr; <a href="fieldset-error02.html">Radio group with error - <code>aria-describedby</code> applied to <code>&lt;fieldset&gt;</code></a></li>
+      <li>&rarr; <a href="fieldset-error03.html">Radio group with error - <code>aria-describedby</code> applied to <code>&lt;legend&gt;</code></a></li>
+      <li>&rarr; <a href="fieldset-error04.html">Radio group with error - <code>aria-describedby</code> applied to <code>&lt;input&gt;</code></a></li>
+      <li>&rarr; <a href="fieldset-error05.html">Radio group with error - <code>aria-label</code> applied to <code>&lt;fieldset&gt;</code></a></li>
+      <li>&rarr; <a href="fieldset-error06.html">Radio group with error - <code>aria-label</code> applied to <code>&lt;input&gt;</code></a></li>
     </ul>
+    <p><a class="button-secondary small" href="support-fieldset-errors.html">Fieldsets with errors support chart</a></p>
+  </section>
+  <hr>
 
-    <h2>Palpable content</h2>
-    <ul>
-      <li><code>&lt;a&gt;</code></li>
-      <li><code>&lt;abbr&gt;</code></li>
-      <li><code>&lt;address&gt;</code></li>
-      <li><code>&lt;article&gt;</code></li>
-      <li><code>&lt;aside&gt;</code></li>
-      <li><code>&lt;audio&gt;</code></li>
-      <li><code>&lt;b&gt;</code></li>
-      <li><code>&lt;bdi&gt;</code></li>
-      <li><code>&lt;bdo&gt;</code></li>
-      <li><code>&lt;blockquote&gt;</code></li>
-      <li><code>&lt;button&gt;</code></li>
-      <li><code>&lt;canvas&gt;</code></li>
-      <li><code>&lt;cite&gt;</code></li>
-      <li><code>&lt;code&gt;</code></li>
-      <li><code>&lt;data&gt;</code></li>
-      <li><code>&lt;details&gt;</code></li>
-      <li><code>&lt;dfn&gt;</code></li>
-      <li><code>&lt;div&gt;</code></li>
-      <li><code>&lt;dl&gt;</code></li>
-      <li><code>&lt;em&gt;</code></li>
-      <li><code>&lt;embed&gt;</code></li>
-      <li><code>&lt;fieldset&gt;</code></li>
-      <li><code>&lt;figure&gt;</code></li>
-      <li><code>&lt;footer&gt;</code></li>
-      <li><code>&lt;form&gt;</code></li>
-      <li><code>&lt;h1&gt;</code></li>
-      <li><code>&lt;h2&gt;</code></li>
-      <li><code>&lt;h3&gt;</code></li>
-      <li><code>&lt;h4&gt;</code></li>
-      <li><code>&lt;h5&gt;</code></li>
-      <li><code>&lt;h6&gt;</code></li>
-      <li><code>&lt;header&gt;</code></li>
-      <li><code>&lt;i&gt;</code></li>
-      <li><code>&lt;iframe&gt;</code></li>
-      <li><code>&lt;img&gt;</code></li>
-      <li><code>&lt;input&gt;</code></li>
-      <li><code>&lt;ins&gt;</code></li>
-      <li><code>&lt;kbd&gt;</code></li>
-      <li><code>&lt;label&gt;</code></li>
-      <li><code>&lt;main&gt;</code></li>
-      <li><code>&lt;map&gt;</code></li>
-      <li><code>&lt;mark&gt;</code></li>
-      <li><code>&lt;math&gt;</code></li>
-      <li><code>&lt;meter&gt;</code></li>
-      <li><code>&lt;nav&gt;</code></li>
-      <li><code>&lt;object&gt;</code></li>
-      <li><code>&lt;ol&gt;</code></li>
-      <li><code>&lt;output&gt;</code></li>
-      <li><code>&lt;p&gt;</code></li>
-      <li><code>&lt;pre&gt;</code></li>
-      <li><code>&lt;progress&gt;</code></li>
-      <li><code>&lt;q&gt;</code></li>
-      <li><code>&lt;ruby&gt;</code></li>
-      <li><code>&lt;s&gt;</code></li>
-      <li><code>&lt;samp&gt;</code></li>
-      <li><code>&lt;section&gt;</code></li>
-      <li><code>&lt;select&gt;</code></li>
-      <li><code>&lt;small&gt;</code></li>
-      <li><code>&lt;span&gt;</code></li>
-      <li><code>&lt;strong&gt;</code></li>
-      <li><code>&lt;sub&gt;</code></li>
-      <li><code>&lt;sup&gt;</code></li>
-      <li><code>&lt;svg&gt;</code></li>
-      <li><code>&lt;table&gt;</code></li>
-      <li><code>&lt;textarea&gt;</code></li>
-      <li><code>&lt;time&gt;</code></li>
-      <li><code>&lt;u&gt;</code></li>
-      <li><code>&lt;ul&gt;</code></li>
-      <li><code>&lt;var&gt;</code></li>
-      <li><code>&lt;video&gt;</code></li>
+  <section id="nested">
+    <h2>Nested <code>&lt;fieldset&gt;</code> tests</h2>
+    <p>Tests to determine how nested <code>&lt;fieldset&gt;</code> elements are announced.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="nested-fieldset.html">Nested <code>&lt;fieldset&gt;</code></a></li>
+      <li>&rarr; <a href="nested-fieldset-presentation.html">Nested <code>&lt;fieldset&gt;</code>, with <code>role="presentation</code>"</a></li>
+      <li>&rarr; <a href="nested-fieldset-without-list.html">Nested <code>&lt;fieldset&gt;</code> without list</a></li>
     </ul>
+    <p><a class="button-secondary small" href="support-nested-fieldsets.html">Nested fieldset support chart</a></p>
+  </section>
+  <hr>
 
-    <h2>Script-supported content</h2>
-    <ul>
-      <li><code>&lt;canvas&gt;</code></li>
-      <li><code>&lt;script&gt;</code></li>
-      <li><code>&lt;template&gt;</code></li>
+  <section id="help">
+    <h2>Help text and error messages associated with form control tests</h2>
+    <p>Tests to determine how help text and error messages can be associated with form controls.</p>
+    <h3>Help text</h3>
+    <ul class="main-list">
+      <li>&rarr; <a href="input-help-text-wrapped-label.html"><code>&lt;input&gt;</code> with help text wrapped inside <code>&lt;label&gt;</code></a></li>
+      <li>&rarr; <a href="input-help-text-aria-describedby.html"><code>&lt;input&gt;</code> with help text using <code>aria-describedby</code></a></li>
+      <li>&rarr; <a href="input-help-text-aria-label.html"><code>&lt;input&gt;</code> with help text as an <code>aria-label</code></a></li>
     </ul>
-
-    <h2>Sectioning-root content</h2>
-    <ul>
-      <li><code>&lt;blockquote&gt;</code></li>
-      <li><code>&lt;body&gt;</code></li>
-      <li><code>&lt;details&gt;</code></li>
-      <li><code>&lt;dialog&gt;</code></li>
-      <li><code>&lt;fieldset&gt;</code></li>
-      <li><code>&lt;figure&gt;</code></li>
-      <li><code>&lt;td&gt;</code></li>
+    <h3>Error messages</h3>
+    <ul class="main-list">
+      <li>&rarr; <a href="input-error-message-wrapped-label.html"><code>&lt;input&gt;</code> with error message wrapped inside <code>&lt;label&gt;</code></a></li>
+      <li>&rarr; <a href="input-error-message-aria-describedby.html"><code>&lt;input&gt;</code> with error message using <code>aria-describedby</code></a></li>
+      <li>&rarr; <a href="input-error-message-aria-errormessage.html"><code>&lt;input&gt;</code> with error message using <code>aria-errormessage</code></a></li>
+      <li>&rarr; <a href="input-error-message-title.html"><code>&lt;input&gt;</code> with error message using <code>title</code></a></li>
+      <li>&rarr; <a href="input-error-message-title-aria-describedby.html"><code>&lt;input&gt;</code> with error message using <code>aria-describedby</code> and <code>title</code></a></li>
+      <li>&rarr; <a href="input-error-message-hidden-aria-describedby.html"><code>&lt;input&gt;</code> with error message using hidden <code>aria-describedby</code></a></li>
     </ul>
+    <p><a class="button-secondary small" href="support-help-error-messages.html">Help text and error message support chart</a></p>
+  </section>
+  <hr>
 
-    <p><a href="https://github.com/russmaxdesign/content-types">Github Page</a></p>
-  </div>
+  <section id="required">
+    <h2>Required field tests</h2>
+    <p>Tests to determine how <code>required</code> and <code>aria-required</code> are announced.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="required01.html"><code>&lt;input&gt;</code> with <code>required</code></a></li>
+      <li>&rarr; <a href="required02.html"><code>&lt;input&gt;</code> with <code>aria-required</code></a></li>
+      <li>&rarr; <a href="required03.html"><code>&lt;input&gt;</code> with <code>required</code> and <code>aria-required</code></a></li>
+      <li>&rarr; <a href="required06.html"><code>&lt;input&gt;</code> with <code>required</code> and <code>aria-invalid</code></a></li>
+    </ul>
+    <p>Tests to determine how visually-displayed "required" options are announced.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="required04.html"><code>&lt;input&gt;</code> with visual <code>required</code> indicator</a></li>
+      <li>&rarr; <a href="required05.html"><code>&lt;input&gt;</code> with visual <code>required</code> indicator, and aria-hidden</a></li>
+    </ul>
+    <p><a class="button-secondary small" href="support-required-fields.html">Required field support chart</a></p>
+  </section>
+  <hr>
 
-<script src="assets/js/prism.js"></script>
+  <section id="accessible-button">
+    <h2><code>&lt;button&gt;</code> accessible name and description tests</h2>
+    <p>The purpose these tests is to show the cascade order of how accessible names are applied in the accessibility tree for the <code>&lt;button&gt;</code> element. <em>These examples should not be considered proper practice</em>.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="accessible-name-button01.html"><code>&lt;button&gt;</code> where <code>aria-labelledby</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-button02.html"><code>&lt;button&gt;</code> where <code>aria-label</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-button03.html"><code>&lt;button&gt;</code> where content should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-button04.html"><code>&lt;button&gt;</code> where <code>title</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-button05.html"><code>&lt;button&gt;</code> with no accessible name</a></li>
+    </ul>
+    <p>The purpose these tests is to show the cascade order of how accessible descriptions are applied in the accessibility tree for the <code>&lt;button&gt;</code> element.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="accessible-description-button01.html"><code>&lt;button&gt;</code> where <code>aria-describedby</code> should be accessible description</a></li>
+      <li>&rarr; <a href="accessible-description-button02.html"><code>&lt;button&gt;</code> where <code>title</code> should be accessible description</a></li>
+      <li>&rarr; <a href="accessible-description-button03.html"><code>&lt;button&gt;</code> with no accessible description</a></li>
+    </ul>
+  </section>
+  <hr>
+
+  <section id="accessible-link">
+    <h2><code>&lt;a&gt;</code> accessible name and description tests</h2>
+    <p>The purpose these tests is to show the cascade order of how accessible names are applied in the accessibility tree for the <code>&lt;a&gt;</code> element. <em>These examples should not be considered proper practice</em>.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="accessible-name-link01.html"><code>&lt;a&gt;</code> where <code>aria-labelledby</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-link02.html"><code>&lt;a&gt;</code> where <code>aria-label</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-link03.html"><code>&lt;a&gt;</code> where content should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-link04.html"><code>&lt;a&gt;</code> where <code>title</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-link05.html"><code>&lt;a&gt;</code> with no accessible name</a></li>
+    </ul>
+    <p>The purpose these tests is to show the cascade order of how accessible descriptions are applied in the accessibility tree for the <code>&lt;a&gt;</code> element.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="accessible-description-link01.html"><code>&lt;a&gt;</code> where <code>aria-describedby</code> should be accessible description</a></li>
+      <li>&rarr; <a href="accessible-description-link02.html"><code>&lt;a&gt;</code> where <code>title</code> should be accessible description</a></li>
+      <li>&rarr; <a href="accessible-description-link03.html"><code>&lt;a&gt;</code> with no accessible description</a></li>
+    </ul>
+  </section>
+  <hr>
+
+  <section id="accessible-input">
+    <h2><code>&lt;input&gt;</code> accessible name and description tests</h2>
+    <p>The purpose these tests is to show the cascade order of how accessible names are applied in the accessibility tree for <code>&lt;input&gt;</code> elements. <em>These examples should not be considered proper practice</em>.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="accessible-name-input01.html"><code>&lt;input&gt;</code> where <code>aria-labelledby</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-input02.html"><code>&lt;input&gt;</code> where <code>aria-label</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-input03.html"><code>&lt;input&gt;</code> where <code>&lt;label&gt;</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-input04.html"><code>&lt;input&gt;</code> where <code>title</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-input05.html"><code>&lt;input&gt;</code> where <code>placeholder</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-input06.html"><code>&lt;input&gt;</code> with no accessible name</a></li>
+    </ul>
+    <p>The purpose these tests is to show the cascade order of how accessible descriptions are applied in the accessibility tree for the <code>&lt;input&gt;</code> element.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="accessible-description-input01.html"><code>&lt;input&gt;</code> where <code>aria-describedby</code> should be accessible description</a></li>
+      <li>&rarr; <a href="accessible-description-input02.html"><code>&lt;input&gt;</code> where <code>title</code> should be accessible description</a></li>
+      <li>&rarr; <a href="accessible-description-input03.html"><code>&lt;input&gt;</code> with no accessible description</a></li>
+    </ul>
+  </section>
+  <hr>
+
+  <section id="accessible-table">
+    <h2><code>&lt;table&gt;</code> accessible name tests</h2>
+    <p>The purpose these tests is to show the cascade order of how accessible names are applied in the accessibility tree for <code>&lt;table&gt;</code> elements. <em>These examples should not be considered proper practice</em>.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="accessible-name-table01.html"><code>&lt;table&gt;</code> where <code>aria-labelledby</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-table02.html"><code>&lt;table&gt;</code> where <code>aria-label</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-table03.html"><code>&lt;table&gt;</code> where <code>&lt;caption&gt;</code> content should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-table04.html"><code>&lt;table&gt;</code> where <code>title</code> should be accessible name</a></li>
+      <li>&rarr; <a href="accessible-name-table05.html"><code>&lt;table&gt;</code> with no accessible name</a></li>
+    </ul>
+    <p>The purpose these tests is to show the cascade order of how accessible descriptions are applied in the accessibility tree for the <code>&lt;table&gt;</code> element.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="accessible-description-table01.html"><code>&lt;table&gt;</code> where <code>aria-describedby</code> should be accessible description</a></li>
+      <li>&rarr; <a href="accessible-description-table02.html"><code>&lt;table&gt;</code> where <code>title</code> should be accessible description</a></li>
+      <li>&rarr; <a href="accessible-description-table03.html"><code>&lt;table&gt;</code> with no accessible description</a></li>
+    </ul>
+  </section>
+  <hr>
+
+  <section id="invalid">
+    <h2><code>aria-invalid</code> tests</h2>
+    <p>Tests to determine how the <code>aria-invalid</code> attribute is announced.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="invalid01.html"><code>&lt;input&gt;</code> with <code>aria-invalid="true"</code></a></li>
+      <li>&rarr; <a href="invalid02.html"><code>&lt;input&gt;</code> with <code>aria-invalid="false"</code></a></li>
+      <li>&rarr; <a href="invalid03.html"><code>&lt;input&gt;</code> with <code>aria-invalid="grammar"</code></a></li>
+      <li>&rarr; <a href="invalid04.html"><code>&lt;input&gt;</code> with <code>aria-invalid="spelling"</code></a></li>
+    </ul>
+    <p><a class="button-secondary small" href="support-aria-invalid.html">aria-invalid support chart</a></p>
+  </section>
+  <hr>
+
+  <section id="attributes">
+    <h2>Form-based attribute tests</h2>
+    <p>Tests to determine how <code>max</code>, <code>aria-valuemax</code>, <code>min</code>, <code>aria-valuemin</code>, <code>maxlength</code>, <code>minlength</code>, <code>multiple</code> and <code>pattern</code> attributes are announced.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="attributes01.html"><code>&lt;input&gt;</code> with <code>max</code></a></li>
+      <li>&rarr; <a href="attributes02.html"><code>&lt;input&gt;</code> with <code>aria-valuemax</code></a></li>
+      <li>&rarr; <a href="attributes03.html"><code>&lt;input&gt;</code> with <code>max</code> and <code>aria-valuemax</code></a></li>
+      <li>&rarr; <a href="attributes04.html"><code>&lt;input&gt;</code> with <code>min</code></a></li>
+      <li>&rarr; <a href="attributes05.html"><code>&lt;input&gt;</code> with <code>aria-valuemin</code></a></li>
+      <li>&rarr; <a href="attributes06.html"><code>&lt;input&gt;</code> with <code>min</code> and <code>aria-valuemin</code></a></li>
+      <li>&rarr; <a href="attributes07.html"><code>&lt;input&gt;</code> with <code>maxlength</code></a></li>
+      <li>&rarr; <a href="attributes08.html"><code>&lt;input&gt;</code> with <code>minlength</code></a></li>
+      <li>&rarr; <a href="attributes09.html"><code>&lt;input&gt;</code> with <code>multiple</code></a></li>
+      <li>&rarr; <a href="attributes10.html"><code>&lt;input&gt;</code> with <code>pattern</code></a></li>
+    </ul>
+    <p><a class="button-secondary small" href="support-form-attributes.html">Form attributes support chart</a></p>
+  </section>
+  <hr>
+
+  <section id="disabled">
+    <h2><code>disabled</code> attribute tests</h2>
+    <p>Tests to determine how the boolean <code>disabled</code> attribute is announced.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="disabled01.html"><code>&lt;button&gt;</code> with <code>disabled</code></a></li>
+      <li>&rarr; <a href="disabled02.html"><code>&lt;input</code> with <code>disabled</code></a></li>
+      <li>&rarr; <a href="disabled03.html"><code>&lt;textarea&gt;</code> with <code>disabled</code></a></li>
+      <li>&rarr; <a href="disabled04.html"><code>&lt;select&gt;</code> with <code>disabled</code></a></li>
+      <li>&rarr; <a href="disabled05.html"><code>&lt;option&gt;</code> with <code>disabled</code></a></li>
+      <li>&rarr; <a href="disabled06.html"><code>&lt;fieldset&gt;</code> with <code>disabled</code></a></li>
+    </ul>
+    <p><a class="button-secondary small" href="support-disabled-fields.html"><code>disabled</code> attribute support chart</a></p>
+  </section>
+  <hr>
+
+  <section id="readonly">
+    <h2><code>readonly</code> and <code>aria-readonly</code> attribute tests</h2>
+    <p>Tests to determine how the boolean <code>readonly</code> and <code>aria-readonly</code> attributes are announced.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="readonly01.html"><code>readonly</code> attribute on <code>&lt;input&gt;</code></a></li>
+      <li>&rarr; <a href="readonly02.html"><code>readonly</code> attribute on <code>&lt;textarea&gt;</code></a></li>
+      <li>&rarr; <a href="readonly03.html"><code>aria-readonly</code> attribute on <code>&lt;input&gt;</code></a></li>
+    </ul>
+    <p><a class="button-secondary small" href="support-readonly-fields.html"><code>readonly</code> and <code>aria-readonly</code> attribute support chart</a></p>
+  </section>
+  <hr>
+
+  <section id="landmark">
+    <h2>ARIA landmark tests</h2>
+    <p>Tests to determine how various landmarks are announced.</p>
+    <h3>Landmarks without labels</h3>
+    <ul class="main-list">
+      <li>&rarr; <a href="landmarks-article01.html"><code>&lt;article&gt;</code></a></li>
+      <li>&rarr; <a href="landmarks-aside01.html"><code>&lt;aside&gt;</code></a></li>
+      <li>&rarr; <a href="landmarks-aside02.html"><code>role="complementary"</code></a></li>
+      <li>&rarr; <a href="landmarks-footer01.html"><code>&lt;footer&gt;</code></a></li>
+      <li>&rarr; <a href="landmarks-footer02.html"><code>role="contentinfo"</code></a></li>
+      <li>&rarr; <a href="landmarks-form.html"><code>role="form"</code></a></li>
+      <li>&rarr; <a href="landmarks-banner01.html"><code>&lt;header&gt;</code></a></li>
+      <li>&rarr; <a href="landmarks-banner02.html"><code>role="banner"</code></a></li>
+      <li>&rarr; <a href="landmarks-main01.html"><code>&lt;main&gt;</code></a></li>
+      <li>&rarr; <a href="landmarks-main02.html"><code>role="main"</code></a></li>
+      <li>&rarr; <a href="landmarks-nav01.html"><code>&lt;nav&gt;</code></a></li>
+      <li>&rarr; <a href="landmarks-nav02.html"><code>role="navigation"</code></a></li>
+      <li>&rarr; <a href="landmarks-search.html"><code>role="search"</code></a></li>
+      <li>&rarr; <a href="landmarks-section01.html"><code>&lt;section&gt;</code></a></li>
+      <li>&rarr; <a href="landmarks-section02.html"><code>role="region"</code></a></li>
+    </ul>
+    <h3>Landmarks with <code>aria-labelledby</code></h3>
+    <ul class="main-list">
+      <li>&rarr; <a href="landmarks-article02.html"><code>&lt;article&gt;</code> with <code>aria-labelledby</code></a></li>
+      <li>&rarr; <a href="landmarks-aside03.html"><code>&lt;aside&gt;</code> with <code>aria-labelledby</code></a></li>
+      <li>&rarr; <a href="landmarks-footer03.html"><code>&lt;footer&gt;</code> with <code>aria-labelledby</code></a></li>
+      <li>&rarr; <a href="landmarks-banner23.html"><code>&lt;header&gt;</code> with <code>aria-labelledby</code></a></li>
+      <li>&rarr; <a href="landmarks-main03.html"><code>&lt;main&gt;</code> with <code>aria-labelledby</code></a></li>
+      <li>&rarr; <a href="landmarks-nav03.html"><code>&lt;nav&gt;</code> with <code>aria-labelledby</code></a></li>
+      <li>&rarr; <a href="landmarks-section03.html"><code>&lt;section&gt;</code> with <code>aria-labelledby</code></a></li>
+    </ul>
+    <h3>Landmarks with <code>aria-label</code></h3>
+    <ul class="main-list">
+      <li>&rarr; <a href="landmarks-article03.html"><code>&lt;article&gt;</code> with <code>aria-label</code></a></li>
+      <li>&rarr; <a href="landmarks-aside04.html"><code>&lt;aside&gt;</code> with <code>aria-label</code></a></li>
+      <li>&rarr; <a href="landmarks-footer04.html"><code>&lt;footer&gt;</code> with <code>aria-label</code></a></li>
+      <li>&rarr; <a href="landmarks-banner24.html"><code>&lt;header&gt;</code> with <code>aria-label</code></a></li>
+      <li>&rarr; <a href="landmarks-main04.html"><code>&lt;main&gt;</code> with <code>aria-label</code></a></li>
+      <li>&rarr; <a href="landmarks-nav04.html"><code>&lt;nav&gt;</code> with <code>aria-label</code></a></li>
+      <li>&rarr; <a href="landmarks-section04.html"><code>&lt;section&gt;</code> with <code>aria-label</code></a></li>
+    </ul>
+    <h3>Multiple landmarks</h3>
+    <ul class="main-list">
+      <li>&rarr; <a href="landmarks-banner-double.html">Two <code>&lt;header&gt;</code> elements</a></li>
+      <li>&rarr; <a href="landmarks-footer-double.html">Two <code>&lt;footer&gt;</code> elements</a></li>
+    </ul>
+    <p><a class="button-secondary small" href="support-landmarks.html">Landmark support chart</a></p>
+  </section>
+  <hr>
+
+  <section id="header">
+    <h2><code>&lt;header&gt;</code> scope tests</h2>
+    <p>When the <code>&lt;header&gt;</code> element is scoped to the <code>&lt;body&gt;</code> element, it will have an implicit ARIA role of <code>banner</code>. Similarly, when the <code>&lt;footer&gt;</code> element is scoped to the <code>&lt;body&gt;</code> element, it will have an implicit ARIA role of <code>contentinfo</code>.</p>
+    <p>However, these two elements will not have implicit ARIA roles if they are descendants of the following elements:<code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code></p>
+    <p>These cases are designed to test whether the <code>&lt;header&gt;</code> element's implicit ARIA role is announced.</p>
+    <h3><code>&lt;header&gt;</code> scoped to the <code>&lt;body&gt;</code> element - implicit ARIA role should be present</h3>
+    <ul class="main-list">
+      <li>&rarr; <a href="landmarks-banner01.html"><code>&lt;header&gt;</code></a></li>
+      <li>&rarr; <a href="landmarks-banner02.html"><code>role="banner"</code></a></li>
+      <li>&rarr; <a href="landmarks-banner05.html"><code>&lt;header&gt;</code> descendant of <code>role="article"</code></a></li>
+      <li>&rarr; <a href="landmarks-banner09.html"><code>&lt;header&gt;</code> descendant of <code>role="complementary"</code></a></li>
+      <li>&rarr; <a href="landmarks-banner13.html"><code>&lt;header&gt;</code> descendant of <code>role="main"</code></a></li>
+      <li>&rarr; <a href="landmarks-banner17.html"><code>&lt;header&gt;</code> descendant of <code>role="navigation"</code></a></li>
+      <li>&rarr; <a href="landmarks-banner21.html"><code>&lt;header&gt;</code> descendant of <code>role="region"</code></a></li>
+    </ul>
+    <h3>&lt;header&gt; scoped to other elements - implicit ARIA role should be absent</h3>
+    <ul class="main-list">
+      <li>&rarr; <a href="landmarks-banner03.html"><code>&lt;header&gt;</code> descendant of <code>&lt;article&gt;</code></a> scoped to the <code>&lt;article&gt;</code> element</li>
+      <li>&rarr; <a href="landmarks-banner07.html"><code>&lt;header&gt;</code> descendant of <code>&lt;aside&gt;</code></a> scoped to the <code>&lt;aside&gt;</code> element</li>
+      <li>&rarr; <a href="landmarks-banner11.html"><code>&lt;header&gt;</code> descendant of <code>&lt;main&gt;</code></a> scoped to the <code>&lt;main&gt;</code> element</li>
+      <li>&rarr; <a href="landmarks-banner15.html"><code>&lt;header&gt;</code> descendant of <code>&lt;nav&gt;</code></a> scoped to the <code>&lt;nav&gt;</code> element</li>
+      <li>&rarr; <a href="landmarks-banner19.html"><code>&lt;header&gt;</code> descendant of <code>&lt;section&gt;</code></a>scoped to the <code>&lt;section&gt;</code> element</li>
+    </ul>
+    <p><a class="button-secondary small" href="support-header-scope.html"><code>&lt;header&gt;</code> scope support chart</a></p>
+  </section>
+  <hr>
+
+  <section id="live">
+    <h2>Live region tests</h2>
+    <p>Tests to determine how live regions are announced.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="live01-aria-live-assertive.html"><code>aria-live="assertive"</code></a></li>
+      <li>&rarr; <a href="live02-aria-live-polite.html"><code>aria-live="polite"</code></a></li>
+      <li>&rarr; <a href="live03-aria-live-off.html"><code>aria-live="off"</code></a></li>
+      <li>&rarr; <a href="live04-role-alert.html"><code>role="alert"</code></a></li>
+      <li>&rarr; <a href="live05-role-status.html"><code>role="status"</code></a></li>
+    </ul>
+    <p><a class="button-secondary small" href="support-live-region.html">Live region support chart</a></p>
+  </section>
+  <hr>
+
+  <section id="onsubmit">
+    <h2>onsubmit tests</h2>
+    <p>Tests to determine how an onsubmit error is announced.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="onsubmit01.html">onsubmit error notification with no <code>role</code></a></li>
+      <li>&rarr; <a href="onsubmit02.html">onsubmit error notification with <code>role="alert"</code></a></li>
+      <li>&rarr; <a href="onsubmit03.html">onsubmit error notification with <code>role="group"</code></a></li>
+      <li>&rarr; <a href="onsubmit04.html">onsubmit error notification with no <code>role</code> or label</a></li>
+    </ul>
+  </section>
+  <hr>
+
+  <section id="rotor">
+    <h2>VoiceOver Rotor tests</h2>
+    <p>Tests to determine if the VoiceOver Rotor displays the landmark information as announced.</p>
+    <ul class="main-list">
+      <li>&rarr; <a href="voiceover01.html">VoiceOver test without ARIA roles</a></li>
+      <li>&rarr; <a href="voiceover02.html">VoiceOver test with ARIA roles</a></li>
+      <li>&rarr; <a href="voiceover03.html">VoiceOver test with <code>aria-labelledby</code></a></li>
+      <li>&rarr; <a href="voiceover04.html">VoiceOver test with <code>aria-label</code></a></li>
+    </ul>
+    <p><a class="button-secondary small" href="support-voiceover-rotor.html">VoiceOver Rotor support chart</a></p>
+  </section>
+  <hr>
+
+  <section aria-label="Other tests">
+    <p><a href="x-other-tests/index.html">Other tests</a></p>
+  </section>
+  <hr>
+
+  <section class="details">
+    <h2 id="technology">Technology details</h2>
+    <p>OSX Catalina - 10.15.7</p>
+    <ul>
+      <li>Chrome 88</li>
+      <li>Firefox 86</li>
+      <li>Safari 14</li>
+    </ul>
+    <p>Windows 10 Enterprise:</p>
+    <ul>
+      <li>Chrome 87</li>
+      <li>Firefox 86</li>
+      <li>Edge 88</li>
+    </ul>
+    <p>Assistive Technologies</p>
+    <ul>
+      <li>VoiceOver</li>
+      <li>NVDA - 2020.4</li>
+      <li>JAWS 2021.2102.34 - February 2021</li>
+    </ul>
+  </section>
 </body>
 </html>
