@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-size: 1em;
+  font-family: helvetica, arial, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+h1, h2, h3, h4 {
+  color: #2E496E;
+}
+
+h1 {
+  margin: 0 0 0.5em;
+  font-size: 1.8em;
+}
+
+code {
+  font-family: consolas, monospace;
+  color: green;
+  font-size: 1em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: .5em;
+  border: 1px solid #999;
+  text-align: left;
+  vertical-align: top;
+}
+
+.container-wide {
+  max-width: 40em;
+  margin: 0;
+}
+
+.table-container {
+  max-width: 1100px;
+  overflow-y: auto;
+}
+
+.table-container::-webkit-scrollbar
+{
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+}
+
+.table-container::-webkit-scrollbar-thumb
+{
+  border-radius: 8px;
+  border: 3px solid #fff;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.deprecated {
+  background: pink;
+}
+
+.none,
+.flow,
+.phrasing,
+.palpable,
+.metadata,
+.sectioning,
+.embedded,
+.interactive,
+.script,
+.heading {
+  background: #dfdfdf;
+}
+
+.highlight {
+  display: block;
+  font-size: .8em;
+  padding: .5em 0 0;
+}
+
+.final {
+  background: lightblue;
+}
