@@ -1,0 +1,1255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Content Model Categories - Max Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container-wide">
+    <h1>HTML Content Model Categories</h1>
+    <p><a href="https://github.com/russmaxdesign/content-types">Github Page</a></p>
+
+    <p>In HTML 4.01, there was a distinction between block-level and inline elements. In HTML 5, this distinction between block and inline has been replaced with a more complex set of content categories.</p>
+    <p>Each element in HTML falls into zero or more categories that group elements with similar characteristics.</p>
+
+    <h2>Content model categories</h2>
+    <div style="max-width: 40em">
+      <!--?xml version="1.0" encoding="utf-8"?-->
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 770 420" style="enable-background:new 0 0 770 420;" xml:space="preserve">
+        <title>Diagram showing content model categories overlapping</title>
+        <style type="text/css">
+          .st1{opacity:0.2;fill:#AF9831;}
+          .st2{opacity:0.2;fill:#3A78B4;}
+          .st3{opacity:0.2;fill:#50893E;}
+          .st4{opacity:0.2;fill:#B06A28;}
+          .st5{opacity:0.2;fill:#814B9E;}
+          .st6{font-family:'HelveticaNeue-Bold';}
+          .st7{font-size:28px;}
+          .st8{opacity:0.2;fill:#8C5060;}
+          .st9{fill:none;stroke:#231F20;stroke-width:2;stroke-miterlimit:10;}
+        </style>
+        <ellipse class="st9" cx="385" cy="210" rx="375" ry="200"></ellipse>
+        <ellipse class="st1" cx="192" cy="165" rx="150" ry="75"></ellipse>
+        <ellipse class="st2" cx="325" cy="208" rx="120" ry="125"></ellipse>
+        <ellipse class="st3" cx="572" cy="141" rx="115" ry="65"></ellipse>
+        <ellipse class="st4" cx="572" cy="283" rx="115" ry="65"></ellipse>
+        <ellipse class="st5" cx="192" cy="335" rx="150" ry="75"></ellipse>
+        <ellipse class="st8" cx="325" cy="210" rx="105" ry="40"></ellipse>
+        <ellipse class="st9" cx="192" cy="165" rx="150" ry="75"></ellipse>
+        <ellipse class="st9" cx="325" cy="208" rx="120" ry="125"></ellipse>
+        <ellipse class="st9" cx="572" cy="141" rx="115" ry="65"></ellipse>
+        <ellipse class="st9" cx="572" cy="283" rx="115" ry="65"></ellipse>
+        <ellipse class="st9" cx="192" cy="335" rx="150" ry="75"></ellipse>
+        <ellipse class="st9" cx="325" cy="210" rx="105" ry="40"></ellipse>
+        <text transform="matrix(1 0 0 1 372 58)" class="st6 st7">Flow</text>
+        <text transform="matrix(1 0 0 1 516 146)" class="st6 st7">Heading</text>
+        <text transform="matrix(1 0 0 1 501 290)" class="st6 st7">Sectioning</text>
+        <text transform="matrix(1 0 0 1 134 348)" class="st6 st7">Metadata</text>
+        <text transform="matrix(1 0 0 1 57 172)" class="st6 st7">Interactive</text>
+        <text transform="matrix(1 0 0 1 265 153)" class="st6 st7">Phrasing</text>
+        <text transform="matrix(1 0 0 1 252 218)" class="st6 st7">Embedded</text>
+      </svg>
+    </div>
+
+    <h3><a href="https://html.spec.whatwg.org/multipage/dom.html#metadata-content">Metadata content</a></h3>
+    <p>Metadata content is content that sets up the presentation or behaviour of the rest of the content, or that sets up the relationship of the document with other documents.</p>
+
+    <h3><a href="https://html.spec.whatwg.org/multipage/dom.html#flow-content">Flow content</a></h3>
+    <p>Most elements that are used in the body of documents and applications are categorised as flow content. The only elements that are not considered flow elements are a subset of metadata elements. The older "block-level" category roughly corresponds to this flow content category.</p>
+
+    <h3><a href="https://html.spec.whatwg.org/multipage/dom.html#phrasing-content">Phrasing content</a></h3>
+    <p>Phrasing content is the text of the document, as well as elements that mark up that text within paragraphs. The older "inline" category corresponds to phrasing content.</p>
+
+    <h3><a href="https://html.spec.whatwg.org/multipage/dom.html#sectioning-content">Sectioning content</a></h3>
+    <p>Sectioning content is content that defines the scope of headers and footers.</p>
+
+    <h3><a href="https://html.spec.whatwg.org/multipage/dom.html#heading-content">Heading content</a></h3>
+    <p>Heading content defines the header of a section.</p>
+
+    <h3><a href="https://html.spec.whatwg.org/multipage/dom.html#embedded-content-2">Embedded content</a></h3>
+    <p>Embedded content is content that imports another resource into the document.</p>
+
+    <h3><a href="https://html.spec.whatwg.org/multipage/dom.html#interactive-content">Interactive content</a></h3>
+    <p>Interactive content is content that is specifically intended for user interaction.</p>
+
+    <h3><a href="https://html.spec.whatwg.org/multipage/dom.html#palpable-content">Palpable content</a></h3>
+    <p>Elements whose content model allows any flow content or phrasing content should have at least one node in its contents that is palpable content and that does not have the hidden attribute specified.</p>
+
+    <h3><a href="https://html.spec.whatwg.org/multipage/dom.html#script-supporting-elements">Script-supported content</a></h3>
+    <p>Script-supporting elements are those that do not represent anything themselves (i.e., they are not rendered), but are used to support scripts, e.g., to provide functionality for the user.</p>
+
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Elements</th>
+        <th>Metadata</th>
+        <th>Flow</th>
+        <th>Phrasing</th>
+        <th>Sectioning</th>
+        <th>Heading</th>
+        <th>Embedded</th>
+        <th>Interactive</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>a</code></td>
+        <td class="na">N/A</td>
+        <td><code>a</code></td>
+        <td><code>a</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td>a <span class="sm">(if the <code>href</code> attribute is present)</span></td>
+      </tr>
+      <tr>
+        <td><code>abbr</code></td>
+        <td class="na">N/A</td>
+        <td><code>abbr</code></td>
+        <td><code>abbr</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>address</code></td>
+        <td class="na">N/A</td>
+        <td><code>address</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>area</code></td>
+        <td class="na">N/A</td>
+        <td><code>area</code> <span class="sm">(if it is a descendant of a <code>map</code> element)</span></td>
+        <td><code>area</code> <span class="sm">(if it is a descendant of a <code>map</code> element)</span></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>article</code></td>
+        <td class="na">N/A</td>
+        <td><code>article</code></td>
+        <td class="na">N/A</td>
+        <td><code>article</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>aside</code></td>
+        <td class="na">N/A</td>
+        <td><code>aside</code></td>
+        <td class="na">N/A</td>
+        <td><code>aside</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>audio</code></td>
+        <td class="na">N/A</td>
+        <td><code>audio</code></td>
+        <td><code>audio</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>audio</code></td>
+        <td><code>audio</code> <span class="sm">(if the <code>controls</code> attribute is present)</span></td>
+      </tr>
+      <tr>
+        <td><code>b</code></td>
+        <td class="na">N/A</td>
+        <td><code>b</code></td>
+        <td><code>b</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>base</code></td>
+        <td><code>base</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>bdi</code></td>
+        <td class="na">N/A</td>
+        <td><code>bdi</code></td>
+        <td><code>bdi</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>bdo</code></td>
+        <td class="na">N/A</td>
+        <td><code>bdo</code></td>
+        <td><code>bdo</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>blockquote</code></td>
+        <td class="na">N/A</td>
+        <td><code>blockquote</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>body</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>br</code></td>
+        <td class="na">N/A</td>
+        <td><code>br</code></td>
+        <td><code>br</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>button</code></td>
+        <td class="na">N/A</td>
+        <td><code>button</code></td>
+        <td><code>button</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>button</code></td>
+      </tr>
+      <tr>
+        <td><code>canvas</code></td>
+        <td class="na">N/A</td>
+        <td><code>canvas</code></td>
+        <td><code>canvas</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>canvas</code></td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>caption</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>cite</code></td>
+        <td class="na">N/A</td>
+        <td><code>cite</code></td>
+        <td><code>cite</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>code</code></td>
+        <td class="na">N/A</td>
+        <td><code>code</code></td>
+        <td><code>code</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>col</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>colgroup</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>data</code></td>
+        <td class="na">N/A</td>
+        <td><code>data</code></td>
+        <td><code>data</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>datalist</code></td>
+        <td class="na">N/A</td>
+        <td><code>datalist</code></td>
+        <td><code>datalist</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>dd</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>del</code></td>
+        <td class="na">N/A</td>
+        <td><code>del</code></td>
+        <td><code>del</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>details</code></td>
+        <td class="na">N/A</td>
+        <td><code>details</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>details</code></td>
+      </tr>
+      <tr>
+        <td><code>dfn</code></td>
+        <td class="na">N/A</td>
+        <td><code>dfn</code></td>
+        <td><code>dfn</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>dialog</code></td>
+        <td class="na">N/A</td>
+        <td><code>dialog</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>div</code></td>
+        <td class="na">N/A</td>
+        <td><code>div</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>dl</code></td>
+        <td class="na">N/A</td>
+        <td><code>dl</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>dt</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>em</code></td>
+        <td class="na">N/A</td>
+        <td><code>em</code></td>
+        <td><code>em</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>embed</code></td>
+        <td class="na">N/A</td>
+        <td><code>embed</code></td>
+        <td><code>embed</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>embed</code></td>
+        <td><code>embed</code></td>
+      </tr>
+      <tr>
+        <td><code>fieldset</code></td>
+        <td class="na">N/A</td>
+        <td><code>fieldset</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>figcaption</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>figure</code></td>
+        <td class="na">N/A</td>
+        <td><code>figure</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>footer</code></td>
+        <td class="na">N/A</td>
+        <td><code>footer</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>form</code></td>
+        <td class="na">N/A</td>
+        <td><code>form</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>h1</code></td>
+        <td class="na">N/A</td>
+        <td><code>h1</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>h1</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>h2</code></td>
+        <td class="na">N/A</td>
+        <td><code>h2</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>h2</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>h3</code></td>
+        <td class="na">N/A</td>
+        <td><code>h3</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>h3</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>h4</code></td>
+        <td class="na">N/A</td>
+        <td><code>h4</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>h4</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>h5</code></td>
+        <td class="na">N/A</td>
+        <td><code>h5</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>h5</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>h6</code></td>
+        <td class="na">N/A</td>
+        <td><code>h6</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>h6</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>head</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>header</code></td>
+        <td class="na">N/A</td>
+        <td><code>header</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>hgroup</code></td>
+        <td class="na">N/A</td>
+        <td><code>hgroup</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>hgroup</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>hr</code></td>
+        <td class="na">N/A</td>
+        <td><code>hr</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>html</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>i</code></td>
+        <td class="na">N/A</td>
+        <td><code>i</code></td>
+        <td><code>i</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>iframe</code></td>
+        <td class="na">N/A</td>
+        <td><code>iframe</code></td>
+        <td><code>iframe</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>iframe</code></td>
+        <td><code>iframe</code></td>
+      </tr>
+      <tr>
+        <td><code>img</code></td>
+        <td class="na">N/A</td>
+        <td><code>img</code></td>
+        <td><code>img</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>img</code></td>
+        <td><code>img</code> <span class="sm">(if the <code>usemap</code> attribute is present)</span></td>
+      </tr>
+      <tr>
+        <td><code>input</code></td>
+        <td class="na">N/A</td>
+        <td><code>input</code></td>
+        <td><code>input</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>input</code> <span class="sm">(if the type attribute is not to <code>hidden</code>)</span></td>
+      </tr>
+      <tr>
+        <td><code>ins</code></td>
+        <td class="na">N/A</td>
+        <td><code>ins</code></td>
+        <td><code>ins</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>kbd</code></td>
+        <td class="na">N/A</td>
+        <td><code>kbd</code></td>
+        <td><code>kbd</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>label</code></td>
+        <td class="na">N/A</td>
+        <td><code>label</code></td>
+        <td><code>label</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>label</code></td>
+      </tr>
+      <tr>
+        <td><code>legend</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>li</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>link</code></td>
+        <td><code>link</code></td>
+        <td><code>link</code> <span class="sm">(if it is allowed in the body)</span></td>
+        <td><code>link</code> <span class="sm">(if it is allowed in the body)</span></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>main</code></td>
+        <td class="na">N/A</td>
+        <td><code>main</code> <span class="sm">(if it is a hierarchically correct main element)</span></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>map</code></td>
+        <td class="na">N/A</td>
+        <td><code>map</code></td>
+        <td><code>map</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>mark</code></td>
+        <td class="na">N/A</td>
+        <td><code>mark</code></td>
+        <td><code>mark</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>menu</code></td>
+        <td class="na">N/A</td>
+        <td><code>menu</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>menuitem</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>meta</code></td>
+        <td><code>meta</code></td>
+        <td><code>meta</code> <span class="sm">(if the <code>itemprop</code> attribute is present)</span></td>
+        <td><code>meta</code> <span class="sm">(if the <code>itemprop</code> attribute is present)</span></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>meter</code></td>
+        <td class="na">N/A</td>
+        <td><code>meter</code></td>
+        <td><code>meter</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>nav</code></td>
+        <td class="na">N/A</td>
+        <td><code>nav</code></td>
+        <td class="na">N/A</td>
+        <td><code>nav</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>noscript</code></td>
+        <td><code>noscript</code></td>
+        <td><code>noscript</code></td>
+        <td><code>noscript</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>object</code></td>
+        <td class="na">N/A</td>
+        <td><code>object</code></td>
+        <td><code>object</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td>object</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>ol</code></td>
+        <td class="na">N/A</td>
+        <td><code>ol</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>optgroup</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>option</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>output</code></td>
+        <td class="na">N/A</td>
+        <td><code>output</code></td>
+        <td><code>output</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>p</code></td>
+        <td class="na">N/A</td>
+        <td><code>p</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>param</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>picture</code></td>
+        <td class="na">N/A</td>
+        <td><code>picture</code></td>
+        <td><code>picture</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td>picture</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>pre</code></td>
+        <td class="na">N/A</td>
+        <td><code>pre</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>progress</code></td>
+        <td class="na">N/A</td>
+        <td><code>progress</code></td>
+        <td><code>progress</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>q</code></td>
+        <td class="na">N/A</td>
+        <td><code>q</code></td>
+        <td><code>q</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>rp</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>rt</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>ruby</code></td>
+        <td class="na">N/A</td>
+        <td><code>ruby</code></td>
+        <td><code>ruby</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>s</code></td>
+        <td class="na">N/A</td>
+        <td><code>s</code></td>
+        <td><code>s</code></td>
+        <td><code>s</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>samp</code></td>
+        <td class="na">N/A</td>
+        <td><code>samp</code></td>
+        <td><code>samp</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>script</code></td>
+        <td><code>script</code></td>
+        <td><code>script</code></td>
+        <td><code>script</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>search</code></td>
+        <td class="na">N/A</td>
+        <td><code>search</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>section</code></td>
+        <td class="na">N/A</td>
+        <td><code>section</code></td>
+        <td class="na">N/A</td>
+        <td><code>section</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>select</code></td>
+        <td class="na">N/A</td>
+        <td><code>select</code></td>
+        <td><code>select</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>select</code></td>
+      </tr>
+      <tr>
+        <td><code>slot</code></td>
+        <td class="na">N/A</td>
+        <td><code>slot</code></td>
+        <td><code>slot</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>small</code></td>
+        <td class="na">N/A</td>
+        <td><code>small</code></td>
+        <td><code>small</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>source</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>span</code></td>
+        <td class="na">N/A</td>
+        <td><code>span</code></td>
+        <td><code>span</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>strong</code></td>
+        <td class="na">N/A</td>
+        <td><code>strong</code></td>
+        <td><code>strong</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>style</code></td>
+        <td><code>style</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>sub</code></td>
+        <td class="na">N/A</td>
+        <td><code>sub</code></td>
+        <td><code>sub</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>summary</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>sup</code></td>
+        <td class="na">N/A</td>
+        <td><code>sup</code></td>
+        <td><code>sup</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>svg</code></td>
+        <td class="na">N/A</td>
+        <td><code>svg</code></td>
+        <td><code>svg</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>svg</code></td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>table</code></td>
+        <td class="na">N/A</td>
+        <td><code>table</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>tbody</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>td</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>template</code></td>
+        <td><code>template</code></td>
+        <td><code>template</code></td>
+        <td><code>template</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>textarea</code></td>
+        <td class="na">N/A</td>
+        <td><code>textarea</code></td>
+        <td><code>textarea</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>textarea</code></td>
+      </tr>
+      <tr>
+        <td><code>tfoot</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>th</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>thead</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>time</code></td>
+        <td class="na">N/A</td>
+        <td><code>time</code></td>
+        <td><code>time</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>title</code></td>
+        <td><code>title</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>tr</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>track</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>u</code></td>
+        <td class="na">N/A</td>
+        <td><code>u</code></td>
+        <td><code>u</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>ul</code></td>
+        <td class="na">N/A</td>
+        <td><code>ul</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>var</code></td>
+        <td class="na">N/A</td>
+        <td><code>var</code></td>
+        <td><code>var</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td><code>video</code></td>
+        <td class="na">N/A</td>
+        <td><code>video</code></td>
+        <td><code>video</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td><code>video</code></td>
+        <td><code>video</code> <span class="sm">(if the <code>controls</code> attribute is present)</span></td>
+      </tr>
+      <tr>
+        <td><code>wbr</code></td>
+        <td class="na">N/A</td>
+        <td><code>wbr</code></td>
+        <td><code>wbr</code></td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

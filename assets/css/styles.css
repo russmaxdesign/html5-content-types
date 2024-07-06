@@ -28,6 +28,14 @@ code {
 
 table {
   border-collapse: collapse;
+  width: 100%;
+}
+
+thead tr {
+  position: sticky; top: 0;
+  box-shadow: 0 3px 2px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0 3px 2px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 3px 2px 0px rgba(0,0,0,0.75);
 }
 
 th,
@@ -36,6 +44,8 @@ td {
   border: 1px solid #999;
   text-align: left;
   vertical-align: top;
+  color: #000;
+  background: #fff;
 }
 
 .container-wide {
@@ -88,3 +98,31 @@ td {
 .final {
   background: lightblue;
 }
+
+.sm {
+  font-size: .7em;
+}
+
+.na {
+  background: #efefef;
+  color: #ccc;
+}
+
+tr:hover {
+  outline: 5px solid red;
+}
+
+tr:hover td {
+  background: #000;
+  color: #fff;
+}
+
+tr:hover td.na {
+  background: #efefef;
+  color: #ccc;
+}
+
+tr:hover td code {
+  color: #fff;
+}
+
